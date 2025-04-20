@@ -1,4 +1,4 @@
-<script>
+
   const form = document.getElementById('formulario');
   const msg = document.getElementById('form-msg');
 
@@ -20,4 +20,4 @@
       alert("Hubo un problema al enviar el mensaje 😢");
     }
   });
-</script>
+
