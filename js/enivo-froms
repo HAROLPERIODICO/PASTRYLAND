@@ -20,4 +20,4 @@
         alert("Hubo un problema al enviar el mensaje 😢");
       }
     });
-}
+})();
