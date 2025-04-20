@@ -167,6 +167,44 @@ body {
   color: #555;
 }
 
+/*Galeria*/
+.galeria {
+  padding: 4rem 2rem;
+  background-color: #fff0f5;
+  text-align: center;
+}
+
+.galeria h2 {
+  font-size: 2rem;
+  color: #d16e8d;
+  margin-bottom: 0.5rem;
+}
+
+.galeria p {
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.grid-galeria img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.grid-galeria img:hover {
+  transform: scale(1.03);
+}
+
+
 
 
 /* Responsive */
