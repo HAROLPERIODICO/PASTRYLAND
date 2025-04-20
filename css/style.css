@@ -99,6 +99,29 @@ body {
   background-color: #a04e63;
 }
 
+
+/* Nosotros*/
+.nosotros {
+  padding: 4rem 2rem;
+  background-color: #fff0f5;
+  text-align: center;
+}
+
+.nosotros h2 {
+  font-size: 2rem;
+  color: #d16e8d;
+  margin-bottom: 1rem;
+}
+
+.nosotros p {
+  max-width: 800px;
+  margin: 0 auto 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
   .nav ul {
