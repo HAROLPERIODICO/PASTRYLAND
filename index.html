@@ -138,22 +138,14 @@
     </div>
   </div>
 </section>
-
-  <form
-  action="https://formspree.io/f/mgvagnez"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>      
+    <div 
+        <form class="formulario-contacto" method="POST" action="https://formspree.io/f/mgvagnez">
+          <input type="text" name="nombre" placeholder="Tu nombre" required />
+          <input type="email" name="email" placeholder="Tu correo" required />
+          <textarea name="mensaje" placeholder="Tu mensaje..." rows="5" required></textarea>
+          <button type="submit">Enviar mensaje</button>
+        </form>
+    </div>
 
         
         
