@@ -112,15 +112,19 @@
     <div class="contacto-grid">
       <div class="info-contacto">
         <p><strong>📍 Dirección:</strong> Carrera 1g # 7-11, San Antonio, Malambo, Atlántico</p>
-        <p><strong>📞 Teléfono:</strong> +57 300 123 4567</p>
-        <p><strong>📱 WhatsApp:</strong> <a href="https://wa.me/573001234567" target="_blank">Chatear</a></p>
-        <p><strong>📧 Correo:</strong> pastryland@correo.com</p>
+        <p><strong>📞 Teléfono:</strong> +57 3167543109</p>
+        <p><strong>📱 WhatsApp:</strong> <a href="https://wa.me/573167543109" target="_blank">Chatear</a></p>
+        <p><strong>📧 Correo:</strong> haroldiazmelendez@gmail.com</p>
       </div>
 
       <form class="formulario-contacto">
-        <input type="text" placeholder="Tu nombre" required />
-        <input type="email" placeholder="Tu correo" required />
-        <textarea placeholder="Tu mensaje..." rows="5" required></textarea>
+          <input type="text" name="nombre" class="formulario-contacto" placeholder="Nombre" required><br><br>
+                    <input type="tel" name="telefono"
+                        pattern="[0-9]{10}" 
+                        placeholder="Teléfono Ej: 5551234567" 
+                        required><br><br>
+                    <input type="email" placeholder="Email:" name="_replyto" required><br><br>                   
+                    <textarea placeholder="Tu mensaje..." rows="5" required></textarea>
         <button type="submit">Enviar mensaje</button>
       </form>
     </div>
