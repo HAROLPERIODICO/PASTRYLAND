@@ -186,6 +186,20 @@ body {
   transform: translateX(0);
 }
 
+
+.nosotros .container {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+/* Efecto al pasar el mouse */
+.nosotros .container:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
 /*Productos*/
 .productos {
   padding: 4rem 2rem;
