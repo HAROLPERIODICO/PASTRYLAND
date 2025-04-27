@@ -282,6 +282,14 @@ body {
   background-color: #f67289;
 }
 
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+  border-color: #f67289; /* Color para el borde cuando el input o textarea esté enfocado */
+  box-shadow: 0 0 5px rgba(246, 114, 137, 0.5); /* Sombra suave alrededor del campo */
+  outline: none; /* Elimina el borde predeterminado del navegador */
+}
+
+
 .mapa iframe {
   width: 100%;
   border-radius: 10px;
