@@ -190,6 +190,19 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
 }
+.galeria .grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+  grid-template-rows: repeat(3, 1fr); /* 3 filas */
+  gap: 1rem; /* Espacio entre las imágenes */
+}
+
+.galeria img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Asegura que las imágenes se ajusten bien sin distorsionarse */
+  border-radius: 8px; /* Bordes redondeados para un efecto más suave */
+}
 
 .grid-galeria img {
   width: 100%;
@@ -346,6 +359,29 @@ body {
 
 
 /* Responsive */
+
+
+
+@media (max-width: 1200px) {
+  .galeria .grid-galeria {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas medianas */
+  }
+}
+
+@media (max-width: 800px) {
+  .galeria .grid-galeria {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 500px) {
+  .galeria .grid-galeria {
+    grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas (móvil) */
+  }
+}
+
+
+
 @media (max-width: 768px) {
   .nav ul {
     flex-direction: column;
