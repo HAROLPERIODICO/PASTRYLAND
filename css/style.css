@@ -12,6 +12,88 @@ body {
   background-color: #fffaf5;
 }
 
+
+/* Estilo de la sección de inicio */
+.inicio {
+  background-color: #f4f4f4;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.inicio .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.inicio .intro {
+  flex: 1;
+  padding: 20px;
+}
+
+.inicio .intro h1 {
+  font-size: 3em;
+  color: #2091F9;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.inicio .intro p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.inicio .intro .cta-btn {
+  padding: 15px 30px;
+  background-color: #2091F9;
+  color: white;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.inicio .intro .cta-btn:hover {
+  background-color: #1a76c1;
+}
+
+.inicio .hero-image {
+  flex: 1;
+  padding: 20px;
+}
+
+.inicio .hero-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.inicio .intro h1, .inicio .intro p, .inicio .cta-btn {
+  animation: fadeInUp 1s ease-out;
+}
+
+.inicio .hero-image img {
+  animation: fadeInUp 1.2s ease-out;
+}
+
+
+
 /* Header */
 /* Estilo del header */
 .header {
