@@ -228,6 +228,7 @@ body {
   height: 100%;
   overflow: auto;
   background-color: rgba(0,0,0,0.8); /* Fondo negro semi-transparente */
+  animation: fadeIn 0.5s; /* Animación de entrada */
 }
 
 .lightbox-content {
@@ -236,6 +237,14 @@ body {
   max-width: 80%;
   max-height: 80%;
   border-radius: 10px;
+  transform: scale(0.8); /* Empezar más pequeño */
+  animation: zoomIn 0.5s forwards; /* Animación de zoom al abrir */
+}
+
+/* Animación de zoom */
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
 
 .close {
@@ -246,7 +255,7 @@ body {
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
+  transition: color 0.3s ease;
 }
 
 .close:hover,
@@ -255,7 +264,6 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
-
 
 /* Contactos */
 .contacto {
