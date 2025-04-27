@@ -112,17 +112,18 @@
                 </div>
                 <div/>    
                      <form class="formulario-contacto" action="https://formspree.io/f/mgvagnez" method="POST">
+                         <div class="fila-inputs">
                           <input type="text" name="nombre" class="formulario-contacto" placeholder="Nombre" required><br><br>
                           <input type="tel" name="telefono"
                                 pattern="[0-9]{10}" 
                                 placeholder="Teléfono Ej: 5551234567" 
                                 required><br><br>
+                          </div>
                           <input type="email" placeholder="Email:" name="_replyto" required><br><br>                   
                           <textarea placeholder="Tu mensaje..." rows="5" required></textarea>
                           <button type="submit">Enviar mensaje</button>
                     </form>
-                </div>
-                
+                    
                     <!-- Mapa opcional -->
                 <div class="mapa">
                     <iframe
