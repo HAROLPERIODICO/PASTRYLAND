@@ -13,15 +13,26 @@ body {
 }
 
 /* Header */
+/* Estilo del header */
 .header {
-  background-color: #fff;
-  padding: 1rem 2rem;
+  background-color: #2091F9; /* Color del fondo */
+  color: #fff; /* Color del texto */
+  padding: 1rem 0;
   position: fixed;
-  top: 0;
   width: 100%;
+  top: 0;
+  left: 0;
   z-index: 100;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  transition: background-color 0.3s ease;
+}
+
+/* Contenedor central para el logo y la navegación */
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .header.scrolled {
@@ -36,67 +47,77 @@ body {
   align-items: center;
 }
 
-.logo {
-  font-size: 1.8rem;
-  color: #d16e8d;
+/* Estilo del logo */
+.header .logo a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
 }
 
+/* Estilo de la barra de navegación */
 .nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
 }
 
-.nav a {
+
+.nav ul li {
+  position: relative; /* Necesario para el pseudo-elemento */
+}
+
+.nav ul li a {
+  color: #fff;
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 5px 0;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.nav a:hover {
-  color: #d16e8d;
+/* Efecto hover en los enlaces de navegación */
+.nav ul li a:hover {
+  color: #ffd700; /* Color dorado */
+  transform: translateY(-5px); /* Desplazamiento hacia arriba */
 }
 
-/* Hero Section */
-.hero {
-  background-image: url('https://images.unsplash.com/photo-1608198093002-ad4e005484f7');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  padding-top: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+/* Agregar una línea de fondo en el hover para un efecto de deslizamiento */
+.nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #ffd700; /* Color dorado */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
 }
 
-.hero-content {
-  background: rgba(255, 250, 245, 0.9);
-  padding: 2rem;
-  border-radius: 15px;
-  max-width: 700px;
+/* Activar la animación de la línea de fondo cuando el hover esté activo */
+.nav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
-.hero h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #a04e63;
-}
 
-.btn {
-  background-color: #d16e8d;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border: none;
+/* Estilo para el botón de llamada a la acción */
+.cta .btn {
+  background-color: #ffd700;
+  color: #2091F9;
+  padding: 10px 20px;
   border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #a04e63;
+.cta .btn:hover {
+  background-color: #ffdf00;
 }
 
 
@@ -550,4 +571,19 @@ body {
   .btn {
     font-size: 0.9rem;
   }
+
+ .header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .cta .btn {
+    margin-top: 15px;
+  }
 }
+
