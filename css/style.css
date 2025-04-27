@@ -236,11 +236,6 @@ body {
   min-width: 250px;
 }
 
-.formulario-contacto {
-  flex: 1;
-  min-width: 300px;
-}
-
 .info-contacto p {
   margin-bottom: 1rem;
 }
@@ -251,16 +246,13 @@ body {
 }
 
 .formulario-contacto {
-  flex: 1 1 300px;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  flex: 1;
+  min-width: 300px;
 }
 
 .formulario-contacto input,
 .formulario-contacto textarea {
   width: 100%;
-  max-width: 500px;
   padding: 0.75rem;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -302,7 +294,16 @@ body {
   flex-direction: column;
   gap: 1rem;
 }
+.formulario-contacto .fila-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 
+.formulario-contacto .fila-inputs input {
+  flex: 1 1 45%;
+  min-width: 200px;
+}
 
 /*Footer*/
 
