@@ -163,17 +163,28 @@ body {
   margin-bottom: 1rem;
 }
 
+/* Animación general */
 .animate-on-scroll {
   opacity: 0;
-  transform: translateY(50px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-.animate-on-scroll.visible {
-  opacity: 1;
-  transform: translateY(0);
+/* Animación específica para imagen (desde la izquierda) */
+.animate-on-scroll.imagen {
+  transform: translateX(-50px);
 }
 
+/* Animación específica para texto (desde la derecha) */
+.animate-on-scroll.texto {
+  transform: translateX(50px);
+}
+
+
+/* Cuando el elemento es visible */
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
 
 /*Productos*/
 .productos {
