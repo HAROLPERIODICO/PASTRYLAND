@@ -1,28 +1,50 @@
-// Seleccionamos el lightbox y su contenido
+// Seleccionamos elementos
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const closeBtn = document.querySelector('.close');
-
-// Seleccionamos todas las imágenes dentro de la galería
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
 const images = document.querySelectorAll('.grid-galeria img');
 
-// Cuando el usuario hace clic en una imagen
-images.forEach(image => {
+let currentIndex = 0;
+
+// Función para abrir el lightbox en una imagen específica
+function openLightbox(index) {
+  lightbox.style.display = 'block';
+  lightboxImg.src = images[index].src;
+  lightboxImg.alt = images[index].alt;
+  currentIndex = index;
+}
+
+// Al hacer clic en una imagen
+images.forEach((image, index) => {
   image.addEventListener('click', () => {
-    lightbox.style.display = 'block'; // Mostrar el lightbox
-    lightboxImg.src = image.src; // Cambiar la imagen al src de la que clickeó
-    lightboxImg.alt = image.alt; // También ponemos el alt
+    openLightbox(index);
   });
 });
 
-// Cuando el usuario hace clic en la X de cerrar
+// Cerrar el lightbox
 closeBtn.addEventListener('click', () => {
-  lightbox.style.display = 'none'; // Ocultar el lightbox
+  lightbox.style.display = 'none';
 });
 
-// También puedes cerrar haciendo clic fuera de la imagen
+// Cerrar haciendo clic fuera de la imagen
 lightbox.addEventListener('click', (e) => {
   if (e.target === lightbox) {
     lightbox.style.display = 'none';
   }
+});
+
+// Ir a la imagen anterior
+prevBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  openLightbox(currentIndex);
+});
+
+// Ir a la imagen siguiente
+nextBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  currentIndex = (currentIndex + 1) % images.length;
+  openLightbox(currentIndex);
 });
