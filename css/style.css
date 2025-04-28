@@ -1,6 +1,6 @@
 /* Reset y fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
-* {
+{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -665,7 +665,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: var(--blanco);
+  color: whait;
   text-decoration: none;
   font-weight: bold;
 }
@@ -686,7 +686,7 @@ nav ul li a {
     grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
   }
 }
-
+/*d16e8d color Rosa*/
 
 @media (max-width: 768px) {
   .nav ul {
@@ -720,7 +720,7 @@ nav ul li a {
   nav ul {
     display: none;
     flex-direction: column;
-    background: var(--rosa-principal);
+    background: #d16e8d;
     width: 100%;
     text-align: center;
     padding: 20px 0;
@@ -729,6 +729,9 @@ nav ul li a {
   nav ul.active {
     display: flex;
   }
+
+  .galeria .grid-galeria {
+    grid-template-columns: repeat(1, 1fr); /* 1 columnas en pantallas pequeñas */
 
   .menu-toggle {
     display: block;
