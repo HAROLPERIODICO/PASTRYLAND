@@ -641,7 +641,33 @@ footer {
 }
 
 
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: var(--blanco);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
+/* Estilos del menú */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+}
 
 
 /* Responsive */
@@ -696,6 +722,26 @@ footer {
     margin-top: 15px;
   }
 
+  
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: var(--rosa-principal);
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+  }
   
 /Galeria/
 .galeria {
