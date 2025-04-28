@@ -160,6 +160,7 @@ body {
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
+
 /* Efecto hover en los enlaces de navegación */
 .nav ul li a:hover {
   color: #ffd700; /* Color dorado */
@@ -645,25 +646,25 @@ footer {
 .menu-toggle {
   display: none;
   font-size: 30px;
-  color: var(--blanco);
+  color: #FFF;
   background: none;
   border: none;
   cursor: pointer;
 }
 
 /* Estilos del menú */
-nav ul {
+.menu nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-nav ul li {
+.menu nav ul li {
   margin: 0 15px;
 }
 
-nav ul li a {
+.menu nav ul li a {
   color: var(--blanco);
   text-decoration: none;
   font-weight: bold;
