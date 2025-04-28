@@ -665,7 +665,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: whait;
+  color: whith;
   text-decoration: none;
   font-weight: bold;
 }
@@ -720,7 +720,7 @@ nav ul li a {
   nav ul {
     display: none;
     flex-direction: column;
-    background: #d16e8d;
+    background: #wait;
     width: 100%;
     text-align: center;
     padding: 20px 0;
