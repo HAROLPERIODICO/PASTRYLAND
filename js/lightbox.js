@@ -1,50 +1,37 @@
-// Seleccionamos elementos
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-const closeBtn = document.querySelector('.close');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
-const images = document.querySelectorAll('.grid-galeria img');
+document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('.grid-galeria img');
+    const lightbox = document.querySelector('.lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    const prevBtn = lightbox.querySelector('.prev');
+    const nextBtn = lightbox.querySelector('.next');
 
-let currentIndex = 0;
+    let currentIndex = 0;
 
-// Función para abrir el lightbox en una imagen específica
-function openLightbox(index) {
-  lightbox.style.display = 'block';
-  lightboxImg.src = images[index].src;
-  lightboxImg.alt = images[index].alt;
-  currentIndex = index;
-}
+    images.forEach((img, index) => {
+      img.addEventListener('click', () => {
+        currentIndex = index;
+        showImage();
+        lightbox.style.display = 'flex';
+      });
+    });
 
-// Al hacer clic en una imagen
-images.forEach((image, index) => {
-  image.addEventListener('click', () => {
-    openLightbox(index);
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage();
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox || e.target === lightboxImg) {
+        lightbox.style.display = 'none';
+      }
+    });
+
+    function showImage() {
+      lightboxImg.src = images[currentIndex].src;
+    }
   });
-});
-
-// Cerrar el lightbox
-closeBtn.addEventListener('click', () => {
-  lightbox.style.display = 'none';
-});
-
-// Cerrar haciendo clic fuera de la imagen
-lightbox.addEventListener('click', (e) => {
-  if (e.target === lightbox) {
-    lightbox.style.display = 'none';
-  }
-});
-
-// Ir a la imagen anterior
-prevBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  openLightbox(currentIndex);
-});
-
-// Ir a la imagen siguiente
-nextBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
-  currentIndex = (currentIndex + 1) % images.length;
-  openLightbox(currentIndex);
-});
