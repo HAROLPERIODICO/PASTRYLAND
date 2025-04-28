@@ -13,7 +13,7 @@ body {
 }
 
 
-/* Estilo de la sección de inicio */
+/*inicio */
 .inicio {
   background-color: #fff0f5;
   padding: 80px 0;
@@ -653,18 +653,18 @@ footer {
 }
 
 /* Estilos del menú */
-.menu nav ul {
+nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.menu nav ul li {
+nav ul li {
   margin: 0 15px;
 }
 
-.menu nav ul li a {
+nav ul li a {
   color: var(--blanco);
   text-decoration: none;
   font-weight: bold;
@@ -686,13 +686,6 @@ footer {
     grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
   }
 }
-
-@media (max-width: 500px) {
-  .galeria .grid-galeria {
-    grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas (móvil) */
-  }
-}
-
 
 
 @media (max-width: 768px) {
@@ -744,46 +737,4 @@ footer {
     right: 30px;
   }
   
-/Galeria/
-.galeria {
-  padding: 4rem 2rem;
-  background-color: #fff0f5;
-  text-align: center;
-}
-
-.galeria h2 {
-  font-size: 2rem;
-  color: #d16e8d;
-  margin-bottom: 0.5rem;
-}
-
-.galeria p {
-  margin-bottom: 2rem;
-  color: #555;
-}
-
-.grid-galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-}
-
-.galeria img {
-  width: 100%;
-  height: auto;
-  object-fit: cover; /* Asegura que las imágenes se ajusten bien sin distorsionarse */
-  border-radius: 8px; /* Bordes redondeados para un efecto más suave */
-}
-
-.galeria img {
-  width: 100%;
-  height: 200px; /* Altura fija para todas las imágenes */
-  object-fit: cover; /* Que rellenen el espacio recortando si es necesario */
-  border-radius: 8px;
-  transition: transform 0.3s ease; /* Opcional: animación suave */
-}
-
-.galeria img:hover {
-  transform: scale(1.05); /* Efecto zoom al pasar el mouse */
-}
 }
