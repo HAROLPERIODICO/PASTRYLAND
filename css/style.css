@@ -374,39 +374,47 @@ body {
   text-align: center;
 }
 
-.galeria h2 {
-  font-size: 2.5rem;
+galeria h2 {
+  font-size: 2rem;
   color: #d16e8d;
   margin-bottom: 0.5rem;
-  font-weight: 600;
 }
 
 .galeria p {
   margin-bottom: 2rem;
   color: #555;
-  font-size: 1.1rem;
 }
 
 /* ==== Grid de Imágenes ==== */
-.galeria-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin-top: 2rem;
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.galeria .grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+  grid-template-rows: repeat(3, 1fr); /* 3 filas */
+  gap: 1rem; /* Espacio entre las imágenes */
 }
 
-.galeria-grid img {
+.galeria img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-  cursor: zoom-in;
+  height: auto;
+  object-fit: cover; /* Asegura que las imágenes se ajusten bien sin distorsionarse */
+  border-radius: 8px; /* Bordes redondeados para un efecto más suave */
 }
 
-.galeria-grid img:hover {
-  transform: scale(1.05);
+.galeria img {
+  width: 100%;
+  height: 200px; /* Altura fija para todas las imágenes */
+  object-fit: cover; /* Que rellenen el espacio recortando si es necesario */
+  border-radius: 8px;
+  transition: transform 0.3s ease; /* Opcional: animación suave */
+}
+
+.galeria img:hover {
+  transform: scale(1.05); /* Efecto zoom al pasar el mouse */
 }
 
 /* ==== Lightbox ==== */
@@ -732,14 +740,14 @@ footer {
 /*d16e8d color Rosa*/
 
 /* Mobile (hasta 768px) */
-@media (max-width: 768px) {
+@media (max-width: 768px) /* {
   .header .container,
   .inicio .container,
   .nosotros-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
+  } */
 
   .nav ul {
     flex-direction: column;
