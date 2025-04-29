@@ -85,11 +85,11 @@ body {
 }
 
 .inicio .intro h1, .inicio .intro p, .inicio .cta-btn {
-  animation: fadeInUp 1s ease-out;
+  animation: fadeInUp 2s ease-out;
 }
 
 .inicio .hero-image img {
-  animation: fadeInUp 1.2s ease-out;
+  animation: fadeInUp 2.2s ease-out;
 }
 
 
