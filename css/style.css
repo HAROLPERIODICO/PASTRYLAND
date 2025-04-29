@@ -368,17 +368,28 @@ body {
   color: #555;
 }
 
-.galeria-grid {
+/*.galeria-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
+}*/
+
+
+.galeria-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 2rem;
 }
-.galeria .grid-galeria {
+
+/*.galeria .grid-galeria {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columnas */
-  grid-template-rows: repeat(3, 1fr); /* 3 filas */
-  gap: 1rem; /* Espacio entre las imágenes */
-}
+  /*grid-template-rows: repeat(3, 1fr); /* 3 filas */
+  /*gap: 1rem; /* Espacio entre las imágenes */
+/*}*/
 
 .galeria img {
   width: 100%;
