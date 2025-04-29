@@ -1,78 +1,95 @@
-/* Reset y fuentes */
+
+
+/* ============================================
+   RESET Y FUENTES
+============================================ */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
-{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
   color: #333;
   background-color: #fffaf5;
+  line-height: 1.6;
 }
 
-
-/*inicio */
+/* ============================================
+   SECCIÓN: INICIO
+============================================ */
 .inicio {
   background-color: #fff0f5;
-  padding: 80px 0;
+  padding: 80px 20px;
   text-align: center;
 }
 
 .inicio .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
 }
 
 .inicio .intro {
-  flex: 1;
+  flex: 1 1 500px;
   padding: 20px;
+  text-align: left;
+  animation: fadeInUp 1.5s ease-out;
 }
 
 .inicio .intro h1 {
-  font-size: 3em;
+  font-size: 2.5em;
   color: #d16e8d;
   margin-bottom: 20px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .inicio .intro p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
+  font-size: 1.125em;
   color: #555;
+  margin-bottom: 30px;
 }
 
-.inicio .intro .cta-btn {
-  padding: 15px 30px;
+.inicio .cta-btn {
+  padding: 14px 28px;
   background-color: #d16e8d;
-  color: white;
-  font-size: 1.1em;
+  color: #fff;
+  font-size: 1em;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  animation: fadeInUp 1.8s ease-out;
 }
 
-.inicio .intro .cta-btn:hover {
-  background-color: #1a76c1;
+.inicio .cta-btn:hover {
+  background-color: #b85c78;
+  transform: translateY(-2px);
 }
 
 .inicio .hero-image {
-  flex: 1;
+  flex: 1 1 500px;
   padding: 20px;
+  animation: fadeInUp 2s ease-out;
 }
 
 .inicio .hero-image img {
   width: 100%;
-  border-radius: 10px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* ============================================
+   ANIMACIONES
+============================================ */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -84,60 +101,60 @@ body {
   }
 }
 
-.inicio .intro h1, .inicio .intro p, .inicio .cta-btn {
-  animation: fadeInUp 2s ease-out;
-}
+/* ============================================
+   RESPONSIVE
+============================================ */
+@media (max-width: 768px) {
+  .inicio .container {
+    flex-direction: column;
+    text-align: center;
+  }
 
-.inicio .hero-image img {
-  animation: fadeInUp 2.2s ease-out;
-}
+  .inicio .intro {
+    text-align: center;
+  }
+
+  .inicio .hero-image img {
+    max-width: 100%;
+  }
 
 
-
-/* Header */
-/* Estilo del header */
+ /* ============================================
+   HEADER
+============================================ */
 .header {
-  background-color: #d16e8d; /* Color del fondo */
-  color: #fff; /* Color del texto */
+  background-color: #d16e8d;
+  color: #fff;
   padding: 1rem 0;
   position: fixed;
-  width: 100%;
   top: 0;
   left: 0;
+  width: 100%;
   z-index: 100;
-}
-
-/* Contenedor central para el logo y la navegación */
-.header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  transition: background-color 0.3s ease;
 }
 
 .header.scrolled {
   background-color: #ffe2e2;
 }
 
-.container {
+.header .container {
   max-width: 1200px;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
 }
 
-/* Estilo del logo */
-.header .logo a {
+.logo a {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700;
   color: #fff;
   text-decoration: none;
 }
 
-/* Estilo de la barra de navegación */
+/* Navegación */
 .nav ul {
   list-style: none;
   display: flex;
@@ -146,56 +163,50 @@ body {
   margin: 0;
 }
 
-
 .nav ul li {
-  position: relative; /* Necesario para el pseudo-elemento */
+  position: relative;
 }
 
 .nav ul li a {
   color: #fff;
   text-decoration: none;
   font-size: 1.1rem;
-  font-weight: bold;
+  font-weight: 600;
   padding: 5px 0;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-
-/* Efecto hover en los enlaces de navegación */
 .nav ul li a:hover {
-  color: #ffd700; /* Color dorado */
-  transform: translateY(-5px); /* Desplazamiento hacia arriba */
+  color: #ffd700;
+  transform: translateY(-5px);
 }
 
-/* Agregar una línea de fondo en el hover para un efecto de deslizamiento */
 .nav ul li a::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
   height: 3px;
-  background-color: #ffd700; /* Color dorado */
+  width: 100%;
+  background-color: #ffd700;
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
 }
 
-/* Activar la animación de la línea de fondo cuando el hover esté activo */
 .nav ul li a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
 
-
-/* Estilo para el botón de llamada a la acción */
+/* Botón CTA */
 .cta .btn {
   background-color: #ffd700;
   color: #2091F9;
   padding: 10px 20px;
   border-radius: 25px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
   transition: background-color 0.3s ease;
 }
 
@@ -203,20 +214,13 @@ body {
   background-color: #ffdf00;
 }
 
-
-/* Nosotros*/
+/* ============================================
+   NOSOTROS
+============================================ */
 .nosotros {
   padding: 4rem 2rem;
   background-color: #fff0f5;
   text-align: center;
-}
-
-.nosotros-container {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  padding: 4rem 0;
-  flex-wrap: wrap;
 }
 
 .nosotros h2 {
@@ -233,10 +237,18 @@ body {
   color: #555;
 }
 
+/* Contenido */
+.nosotros-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 0;
+}
 
-.nosotros-img {
-  flex: 1;
-  min-width: 300px;
+.nosotros-img,
+.nosotros-texto {
+  flex: 1 1 300px;
 }
 
 .nosotros-img img {
@@ -248,11 +260,6 @@ body {
 
 .nosotros-img img:hover {
   transform: scale(1.05);
-}
-
-.nosotros-texto {
-  flex: 1;
-  min-width: 300px;
 }
 
 .nosotros-texto h2 {
@@ -267,44 +274,41 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Animación general */
+/* Animaciones con scroll */
 .animate-on-scroll {
   opacity: 0;
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* Animación específica para imagen (desde la izquierda) */
 .animate-on-scroll.imagen {
   transform: translateX(-50px);
 }
 
-/* Animación específica para texto (desde la derecha) */
 .animate-on-scroll.texto {
   transform: translateX(50px);
 }
 
-
-/* Cuando el elemento es visible */
 .animate-on-scroll.visible {
   opacity: 1;
   transform: translateX(0);
 }
 
-
+/* Contenedor destacado */
 .nosotros .container {
-  background: #ffffff;
+  background: #fff;
   padding: 2rem;
   border-radius: 1rem;
   transition: box-shadow 0.4s ease, transform 0.4s ease;
 }
 
-/* Efecto al pasar el mouse */
 .nosotros .container:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   transform: translateY(-5px);
 }
 
-/Productos/
+
+
+/* Sección Productos */
 .productos {
   padding: 4rem 2rem;
   background-color: #fff;
@@ -312,45 +316,58 @@ body {
 }
 
 .productos h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #d16e8d;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  font-weight: 600;
 }
 
+/* Grid adaptable */
 .grid-productos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
 }
 
+/* Tarjeta de producto */
 .producto {
   background-color: #fffaf5;
-  padding: 1rem;
-  border-radius: 15px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  transition: transform 0.3s;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .producto:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
 
 .producto img {
   width: 100%;
-  border-radius: 10px;
+  height: auto;
+  border-radius: 0.75rem;
+  object-fit: cover;
 }
 
+/* Título del producto */
 .producto h3 {
-  margin-top: 0.8rem;
+  margin-top: 1rem;
   color: #a04e63;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
+/* Descripción */
 .producto p {
   font-size: 0.95rem;
-  color: #555;
+  color: #666;
+  line-height: 1.4;
+  margin-top: 0.5rem;
 }
 
-/Galeria/
+
+/* ==== Galería General ==== */
 .galeria {
   padding: 4rem 2rem;
   background-color: #fff0f5;
@@ -358,89 +375,73 @@ body {
 }
 
 .galeria h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #d16e8d;
   margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 .galeria p {
   margin-bottom: 2rem;
   color: #555;
+  font-size: 1.1rem;
 }
 
-/*.galeria-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-}*/
-
-
+/* ==== Grid de Imágenes ==== */
 .galeria-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
-  align-items: flex-start;
   margin-top: 2rem;
 }
 
-/*.galeria .grid-galeria {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columnas */
-  /*grid-template-rows: repeat(3, 1fr); /* 3 filas */
-  /*gap: 1rem; /* Espacio entre las imágenes */
-/*}*/
-
-.galeria img {
+.galeria-grid img {
   width: 100%;
-  height: auto;
-  object-fit: cover; /* Asegura que las imágenes se ajusten bien sin distorsionarse */
-  border-radius: 8px; /* Bordes redondeados para un efecto más suave */
-}
-
-.galeria img {
-  width: 100%;
-  height: 200px; /* Altura fija para todas las imágenes */
-  object-fit: cover; /* Que rellenen el espacio recortando si es necesario */
+  height: 200px;
+  object-fit: cover;
   border-radius: 8px;
-  transition: transform 0.3s ease; /* Opcional: animación suave */
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
 }
 
-.galeria img:hover {
-  transform: scale(1.05); /* Efecto zoom al pasar el mouse */
+.galeria-grid img:hover {
+  transform: scale(1.05);
 }
 
-/* Lightbox */
+/* ==== Lightbox ==== */
 .lightbox {
-  display: none; /* Oculto por defecto */
+  display: none;
   position: fixed;
   z-index: 1000;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
   padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.8); /* Fondo negro semi-transparente */
-  animation: fadeIn 0.5s; /* Animación de entrada */
+  animation: fadeIn 0.5s;
 }
 
 .lightbox-content {
-  margin: auto;
   display: block;
+  margin: auto;
   max-width: 80%;
   max-height: 80%;
   border-radius: 10px;
-  transform: scale(0.8); /* Empezar más pequeño */
-  animation: zoomIn 0.5s forwards; /* Animación de zoom al abrir */
+  transform: scale(0.8);
+  animation: zoomIn 0.5s forwards;
 }
 
-/* Animación de zoom */
+/* ==== Animaciones ==== */
 @keyframes zoomIn {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ==== Botón de Cierre ==== */
 .close {
   position: absolute;
   top: 20px;
@@ -452,42 +453,32 @@ body {
   transition: color 0.3s ease;
 }
 
-.close:hover,
-.close:focus {
+.close:hover {
   color: #f67289;
-  text-decoration: none;
-  cursor: pointer;
 }
 
-/* Flechas de navegación */
+/* ==== Flechas de Navegación ==== */
 .prev, .next {
-  cursor: pointer;
   position: absolute;
   top: 50%;
-  width: auto;
   padding: 16px;
-  margin-top: -22px;
-  color: #fff;
-  font-weight: bold;
   font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
   user-select: none;
-  transition: 0.3s;
+  transition: color 0.3s ease;
+  transform: translateY(-50%);
 }
 
-.next {
-  right: 20px;
-}
-
-.prev {
-  left: 20px;
-}
+.prev { left: 20px; }
+.next { right: 20px; }
 
 .prev:hover, .next:hover {
   color: #f67289;
 }
 
-
-/* Contactos */
+/* Contacto - Estilos generales */
 .contacto {
   padding: 4rem 2rem;
   background-color: #fff;
@@ -505,6 +496,7 @@ body {
   color: #555;
 }
 
+/* Grid de contacto (info + formulario) */
 .contacto-grid {
   display: flex;
   flex-wrap: wrap;
@@ -514,6 +506,7 @@ body {
   margin-top: 2rem;
 }
 
+/* Información de contacto */
 .info-contacto {
   flex: 1;
   min-width: 250px;
@@ -528,9 +521,27 @@ body {
   text-decoration: none;
 }
 
+/* Formulario */
 .formulario-contacto {
   flex: 1;
   min-width: 300px;
+}
+
+.contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formulario-contacto .fila-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.formulario-contacto .fila-inputs input {
+  flex: 1 1 45%;
+  min-width: 200px;
 }
 
 .formulario-contacto input,
@@ -542,12 +553,12 @@ body {
   font-size: 1rem;
 }
 
-
 .formulario-contacto textarea {
   min-height: 150px;
   resize: vertical;
 }
 
+/* Botón de enviar */
 .formulario-contacto button {
   width: fit-content;
   padding: 0.75rem 1.5rem;
@@ -558,43 +569,9 @@ body {
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  align-self: center;
-}
-
-.formulario-contacto button:hover {
-  background-color: #f67289;
-}
-
-.formulario-contacto input:focus,
-.formulario-contacto textarea:focus {
-  border-color: #f67289; /* Color para el borde cuando el input o textarea esté enfocado */
-  box-shadow: 0 0 5px rgba(246, 114, 137, 0.5); /* Sombra suave alrededor del campo */
-  outline: none; /* Elimina el borde predeterminado del navegador */
-}
+  align-self
 
 
-.mapa iframe {
-  width: 100%;
-  border-radius: 10px;
-  margin-top: 2rem;
-}
-
-
-.contacto form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.formulario-contacto .fila-inputs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.formulario-contacto .fila-inputs input {
-  flex: 1 1 45%;
-  min-width: 200px;
-}
 
 /Footer/
 
@@ -684,7 +661,62 @@ nav ul li a {
 
 /* Responsive */
 
+/* Footer - Contenedor principal */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
 
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Navegación en el footer */
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #f39c12;
+}
+
+/* Información del footer */
+.footer-info p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Redes sociales */
+.redes-sociales a {
+  color: #2091F9;
+  text-decoration: none;
+  margin: 0 5px;
+  font-weight: bold;
+  transition: text-decoration 0.3s ease;
+}
+
+.redes-sociales a:hover {
+  text-decoration: underline;
+}
 
 @media (max-width: 1200px) {
   .galeria .grid-galeria {
@@ -699,56 +731,77 @@ nav ul li a {
 }
 /*d16e8d color Rosa*/
 
+/* Mobile (hasta 768px) */
 @media (max-width: 768px) {
-  .nav ul {
+  .header .container,
+  .inicio .container,
+  .nosotros-container {
     flex-direction: column;
-    gap: 1rem;
-  }
-
-  .hero h2 {
-    font-size: 1.3rem;
-  }
-
-  .btn {
-    font-size: 0.9rem;
-  }
-
- .header .container {
-    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
   .nav ul {
     flex-direction: column;
-    gap: 15px;
-  }
-
-  .cta .btn {
-    margin-top: 15px;
-  }
-
-  
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background: #wait;
+    gap: 10px;
+    background-color: #d16e8d;
+    position: absolute;
+    top: 60px;
+    left: 0;
     width: 100%;
-    text-align: center;
-    padding: 20px 0;
+    padding: 1rem 0;
+    display: none;
   }
 
-  nav ul.active {
+  .nav ul.active {
     display: flex;
   }
 
-  .galeria .grid-galeria {
-    grid-template-columns: repeat(1, 1fr); /* 1 columnas en pantallas pequeñas */
-
-  .menu-toggle {
+  .nav-toggle {
     display: block;
-    position: absolute;
-    top: 20px;
-    right: 30px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
   }
-  
+
+  .cta {
+    display: none; /* Oculta el botón si lo deseas o adáptalo */
+  }
+
+  .inicio .intro h1 {
+    font-size: 2rem;
+  }
+
+  .inicio .hero-image,
+  .nosotros-img,
+  .nosotros-texto {
+    padding: 0;
+  }
+
+  /* Botón hamburguesa para móviles */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Menú responsive */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
 }
