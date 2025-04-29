@@ -394,7 +394,7 @@ body {
 
 .galeria img {
   width: 100%;
-  height: 200px; /* Altura fija para todas las imágenes */
+  height: auto; /* Altura fija para todas las imágenes */
   object-fit: cover; /* Que rellenen el espacio recortando si es necesario */
   border-radius: 8px;
   transition: transform 0.3s ease; /* Opcional: animación suave */
@@ -573,11 +573,11 @@ body {
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  align-self
+  align-self: center;
+
+}
 
 
-
-/Footer/
 
 /*Footer*/
 
@@ -637,8 +637,6 @@ footer {
 
 
 
-
-
 /* Botón hamburguesa */
 .menu-toggle {
   display: none;
@@ -649,83 +647,7 @@ footer {
   cursor: pointer;
 }
 
-/* Estilos del menú */
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
 
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: whith;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-
-/* Responsive */
-
-/* Footer - Contenedor principal */
-footer {
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-/* Navegación en el footer */
-.footer-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.footer-nav a:hover {
-  color: #f39c12;
-}
-
-/* Información del footer */
-.footer-info p {
-  margin: 0;
-  font-size: 14px;
-}
-
-/* Redes sociales */
-.redes-sociales a {
-  color: #2091F9;
-  text-decoration: none;
-  margin: 0 5px;
-  font-weight: bold;
-  transition: text-decoration 0.3s ease;
-}
-
-.redes-sociales a:hover {
-  text-decoration: underline;
-}
 
 @media (max-width: 1200px) {
   .galeria .grid-galeria {
