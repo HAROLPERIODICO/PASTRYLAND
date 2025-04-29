@@ -673,7 +673,7 @@ footer {
   } */
 
   .nav ul {
-    flex-direction: column;
+    /*flex-direction: column;*/
     gap: 10px;
     background-color: #d16e8d;
     position: absolute;
