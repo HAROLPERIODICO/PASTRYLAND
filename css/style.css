@@ -3,7 +3,7 @@
 ============================================ */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
 
-* {
+{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -99,22 +99,6 @@ body {
   }
 }
 
-/* ============================================
-   RESPONSIVE
-============================================ */
-@media (max-width: 768px) {
-  .inicio .container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .inicio .intro {
-    text-align: center;
-  }
-
-  .inicio .hero-image img {
-    max-width: 100%;
-  }
 
 
  /* ============================================
@@ -738,8 +722,8 @@ footer {
 /*d16e8d color Rosa*/
 
 /* Mobile (hasta 768px) */
-@media (max-width: 768px) /* {
-  .header .container,
+@media (max-width: 768px) {
+ /* .header .container,
   .inicio .container,
   .nosotros-container {
     flex-direction: column;
@@ -784,6 +768,24 @@ footer {
     padding: 0;
   }
 
+/* ============================================
+   RESPONSIVE
+============================================ */
+
+ /* .inicio .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .inicio .intro {
+    text-align: center;
+  }
+
+  .inicio .hero-image img {
+    max-width: 100%;
+  }*/
+
+   
   /* Botón hamburguesa para móviles */
 .menu-toggle {
   display: none;
@@ -795,7 +797,7 @@ footer {
 }
 
 /* Menú responsive */
-nav ul {
+/*nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
@@ -803,7 +805,7 @@ nav ul {
   gap: 15px;
   padding: 0;
   margin: 0;
-}
+}*/
 
 nav ul li a {
   color: white;
