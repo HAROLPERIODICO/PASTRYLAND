@@ -712,11 +712,17 @@ footer {
     padding: 0;
   }
 
+   .contacto {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+   }
+
   .contacto-grid {
     flex-direction: column;
     align-items: center;
   }
-
+/*
   .formulario-contacto,
   .info-contacto {
     width: 100%;
@@ -729,7 +735,7 @@ footer {
 
   .formulario-contacto .fila-inputs input {
     min-width: unset;
-  }
+  }*/
 
 
 html, body {
@@ -746,11 +752,7 @@ html, body {
   cursor: pointer;
 }
 
-   .contacto {
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-   }
+   
 
 /* Menú responsive */
 /*nav ul {
