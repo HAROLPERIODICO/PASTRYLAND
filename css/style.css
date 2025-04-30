@@ -665,13 +665,16 @@ footer {
 /* Mobile (hasta 768px) */
 @media (max-width: 768px) {
  .header .container {
-    background-color: #d16e8d;
-    position: absolute;
-    
-    align-items: center;
-  
-  } 
-
+  background-color: #d16e8d; /* Color del fondo */
+  color: #fff; /* Color del texto */
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+   
   .nav ul {
     /*flex-direction: column;*/
     gap: 10px;
