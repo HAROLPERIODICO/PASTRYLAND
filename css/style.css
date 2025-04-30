@@ -746,6 +746,11 @@ html, body {
   cursor: pointer;
 }
 
+   .contacto {
+    margin: 0 auto;
+    padding: 1rem;
+   }
+
 /* Menú responsive */
 /*nav ul {
   list-style: none;
