@@ -712,20 +712,28 @@ footer {
     padding: 0;
   }
 
-/* ============================================
-   RESPONSIVE
-============================================ */
+  .contacto-grid {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.contacto-grid {
-  display: flex;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 1rem;
-}
+  .formulario-contacto,
+  .info-contacto {
+    width: 100%;
+    max-width: 500px;
+  }
 
-   /* Formulario */
-.formulario-contacto {
-  flex: 1;
-  min-width: 100px;
+  .formulario-contacto .fila-inputs {
+    flex-direction: column;
+  }
+
+  .formulario-contacto .fila-inputs input {
+    min-width: unset;
+  }
+
+
+html, body {
+  overflow-x: hidden;
 }
    
   /* Botón hamburguesa para móviles */
