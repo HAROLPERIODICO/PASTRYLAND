@@ -664,9 +664,13 @@ footer {
 
 /* Mobile (hasta 768px) */
 @media (max-width: 768px) {
- .header .container {
-  background-color: #d16e8d; /* Color del fondo */
-  color: #fff; /* Color del texto */
+     .galeria .grid-galeria {
+    grid-template-columns: repeat(1, 2fr); /* 2 columnas en pantallas pequeñas */
+  }
+}
+/* .header .container {
+  background-color: #d16e8d;  Color del fondo 
+  color: #fff; Color del texto 
   padding: 1rem 0;
   position: fixed;
   width: 100%;
@@ -677,7 +681,7 @@ footer {
    
   .nav ul {
     /*flex-direction: column;*/
-    gap: 10px;
+   /* gap: 10px;
     background-color: #d16e8d;
     position: absolute;
     top: 60px;
@@ -700,7 +704,7 @@ footer {
 
   .cta {
     display: none; /* Oculta el botón si lo deseas o adáptalo */
-  }
+/*  }
 
   .inicio .intro h1 {
     font-size: 2rem;
@@ -736,14 +740,14 @@ footer {
   .formulario-contacto .fila-inputs input {
     min-width: unset;
   }*/
-
+/*
 
 html, body {
   overflow-x: hidden;
 }
    
   /* Botón hamburguesa para móviles */
-.menu-toggle {
+/*.menu-toggle {
   display: none;
   font-size: 30px;
   color: #fff;
@@ -765,9 +769,9 @@ html, body {
   margin: 0;
 }*/
 
-nav ul li a {
+/*nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
-}
+}*/
