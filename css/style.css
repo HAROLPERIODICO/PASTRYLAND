@@ -723,10 +723,10 @@ footer {
 }*/
 
    /* Formulario */
-/*.formulario-contacto {
+.formulario-contacto {
   flex: 1;
-  min-width: 300px;
-}*/
+  min-width: 100px;
+}
    
   /* Botón hamburguesa para móviles */
 .menu-toggle {
