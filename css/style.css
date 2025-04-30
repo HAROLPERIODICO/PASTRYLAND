@@ -716,11 +716,17 @@ footer {
    RESPONSIVE
 ============================================ */
 
-.contacto-grid {
+/*.contacto-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 1rem;
-}
+}*/
+
+   /* Formulario */
+/*.formulario-contacto {
+  flex: 1;
+  min-width: 300px;
+}*/
    
   /* Botón hamburguesa para móviles */
 .menu-toggle {
