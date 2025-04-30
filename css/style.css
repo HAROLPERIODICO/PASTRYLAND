@@ -489,6 +489,11 @@ body {
   text-align: center;
 }
 
+.contacto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
 .contacto h2 {
   color: #d16e8d;
   font-size: 2rem;
