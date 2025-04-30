@@ -664,12 +664,12 @@ footer {
 
 /* Mobile (hasta 768px) */
 @media (max-width: 768px) {
- .header .container,
-  .inicio .container,
-  .nosotros-container {
-    flex-direction: column;
+ .header .container {
+    background-color: #d16e8d;
+    position: absolute;
+    
     align-items: center;
-    text-align: center;
+  
   } 
 
   .nav ul {
