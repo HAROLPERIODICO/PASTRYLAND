@@ -487,6 +487,13 @@ body {
   padding: 4rem 2rem;
   background-color: #fff;
   text-align: center;
+
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+   
 }
 
 .contacto h2 {
