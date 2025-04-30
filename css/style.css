@@ -664,13 +664,13 @@ footer {
 
 /* Mobile (hasta 768px) */
 @media (max-width: 768px) {
- /* .header .container,
+ .header .container,
   .inicio .container,
   .nosotros-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
-  } */
+  } 
 
   .nav ul {
     /*flex-direction: column;*/
