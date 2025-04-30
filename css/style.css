@@ -489,11 +489,6 @@ body {
   text-align: center;
 }
 
-.contacto-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-}
 .contacto h2 {
   color: #d16e8d;
   font-size: 2rem;
@@ -718,19 +713,11 @@ footer {
    RESPONSIVE
 ============================================ */
 
- /* .inicio .container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .inicio .intro {
-    text-align: center;
-  }
-
-  .inicio .hero-image img {
-    max-width: 100%;
-  }*/
-
+.contacto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+}
    
   /* Botón hamburguesa para móviles */
 .menu-toggle {
