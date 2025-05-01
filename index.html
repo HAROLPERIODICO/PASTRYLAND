@@ -30,29 +30,31 @@
 <body>    
 
 <header class="header" id="main-header">
-
+   <div class="container">
+    <!-- Logo de la pastelería -->
+     <h1 class="logo">
+      <img src="img/Logo75.jpg" alt="Pastelería" />
+      <a href="#">PastryLand</a>
+     </h1>
+    <!-- Botón de llamada a la acción -->
+    <!-- Ícono hamburguesa -->   
+     <button class="menu-toggle" id="menu-toggle">&#9776;</button>
     <!-- Barra de navegación -->
-    <nav class="nav">
-      <ul>
+     <nav class="nav">
+      <ul id="menu">
         <li><a href="#inicio">Inicio</a></li>  
         <li><a href="#nosotros">Nosotros</a></li>
         <li><a href="#productos">Productos</a></li>
         <li><a href="#galeria">Galería</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
-    </nav>
+     </nav>
 
-    <!-- Botón de llamada a la acción -->
-    <div class="cta">
-      <a href="#contacto" class="btn">Haz tu pedido</a>
-    </div>
-  </div>
-    <div class="container">
-    <button class="menu-toggle" id="menu-toggle">&#9776;</button> <!-- Ícono hamburguesa -->
-    <nav>
-      <ul id="menu">
+    
+      <div class="cta">
+        <a href="#contacto" class="btn">Contáctanos</a>
+      </div>
 
-    </nav>
   </div>  
 </header>
         
@@ -65,11 +67,7 @@
    <a class="next">&#10095;</a>  <!-- Flecha derecha -->
   </div>
 
-    <div class="container">
-    <!-- Logo de la pastelería -->
-    <h1 class="logo">
-      <a href="#">PastryLand</a>
-    </h1>
+    
 
 <section id="inicio" class="inicio">
   <div class="container">
@@ -171,7 +169,7 @@
                         <div/>    
                                  <form class="formulario-contacto" action="https://formspree.io/f/mgvagnez" method="POST">
                                      <div class="fila-inputs">
-                                      <input type="text" name="nombre" class="formulario-contacto" placeholder="Nombre" required><br><br>
+                                      <input type="text" name="nombre" placeholder="Nombre" required><br><br>
                                       <input type="tel" name="telefono"
                                             pattern="[0-9]{10}" 
                                             placeholder="Teléfono Ej: 5551234567" 
