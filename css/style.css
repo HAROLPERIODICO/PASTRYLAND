@@ -1,3 +1,586 @@
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografía */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background-color: #fffaf5;
+  padding-top: 80px;
+}
+
+/* Contenedor reutilizable */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Header fijo */
+.header {
+  background-color: #d16e8d;
+  color: #fff;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.header.scrolled {
+  background-color: #ffe2e2;
+}
+
+/* Logo */
+.logo a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Navegación */
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 5px 0;
+  transition: color 0.3s, transform 0.3s;
+  position: relative;
+}
+
+.nav li a:hover {
+  color: #ffd700;
+  transform: translateY(-5px);
+}
+
+.nav li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #ffd700;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-out;
+}
+
+.nav li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Botón CTA */
+.cta .btn {
+  background-color: #ffd700;
+  color: #2091F9;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cta .btn:hover {
+  background-color: #ffdf00;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.inicio {
+  background-color: #fff0f5;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.inicio .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.inicio .intro {
+  flex: 1 1 500px;
+  text-align: left;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.inicio .intro h1 {
+  font-size: 2.5rem;
+  color: #d16e8d;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.inicio .intro p {
+  font-size: 1.125rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.inicio .cta-btn {
+  padding: 14px 28px;
+  background-color: #d16e8d;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  animation: fadeInUp 1.8s ease-out;
+}
+
+.inicio .cta-btn:hover {
+  background-color: #b85c78;
+  transform: translateY(-2px);
+}
+
+.inicio .hero-image {
+  flex: 1 1 500px;
+  animation: fadeInUp 2s ease-out;
+}
+
+.inicio .hero-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #d16e8d;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .cta {
+    display: none; /* Ocultamos el botón para móviles, opcional */
+  }
+
+ChatGPT
+Tú dijiste:
+tengo arrecostado la seccion contacto hacia la derecha en responsive
+ChatGPT Plus
+Si la sección de contacto se ve "arrecostada" hacia la derecha en la versión responsive (móvil o tablet), lo más probable es que haya alguno de estos problemas en tu CSS o estructura HTML:
+
+Posibles causas y soluciones
+1. Margen o padding excesivo
+Asegúrate de que no tengas un margin-left, padding-left o margin-right, padding-right innecesario en resoluciones pequeñas.
+
+@media (max-width: 768px) {
+  .contacto {
+    margin: 0 auto;
+    padding: 1rem;
+  }
+}
+2. Ancho fijo en lugar de relativo
+Evita usar width: 600px; o valores fijos. Usa porcentajes o max-width.
+
+.contacto {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+3. Overflow oculto o scroll horizontal
+Si algún elemento está desbordando su contenedor, puede empujar el contenido hacia un lado. Usa esta regla para detectarlo:
+
+* {
+  box-sizing: border-box;
+}
+html, body {
+  overflow-x: hidden;
+}
+4. Uso incorrecto de position o transform
+Si estás usando position: absolute o transform: translateX(), verifica que no estés desplazando la sección innecesariamente.
+
+Si me compartes el fragmento de HTML y CSS de esa sección, puedo decirte exactamente dónde está el problema. ¿Quieres pegar el código aquí?
+
+Tú dijiste:
+
+        <section class="contacto" id="contacto">
+          <div class="container">
+            <h2>Contacto</h2>
+            <p>¿Quieres hacer un pedido o tienes preguntas? ¡Escríbenos!</p>
+        
+            <div class="contacto-grid">
+              <div class="info-contacto">
+                    <p><strong>📍 Dirección:</strong> Carrera 1g # 7-11, San Antonio, Malambo, Atlántico</p>
+                    <p><strong>📞 Teléfono:</strong> +57 3175853510</p>
+                    <p><strong>📱 WhatsApp:</strong> <a href="https://wa.me/573175853510" target="_blank">Chatear</a></p>
+                    <p><strong>📧 Correo:</strong> haroldiazmelendez@gmail.com</p>
+                </div>
+                <div/>    
+                     <form class="formulario-contacto" action="https://formspree.io/f/mgvagnez" method="POST">
+                         <div class="fila-inputs">
+                          <input type="text" name="nombre" class="formulario-contacto" placeholder="Nombre" required><br><br>
+                          <input type="tel" name="telefono"
+                                pattern="[0-9]{10}" 
+                                placeholder="Teléfono Ej: 5551234567" 
+                                required><br><br>
+                          </div>
+                          <input type="email" placeholder="Email:" name="_replyto" required><br><br>                   
+                          <textarea placeholder="Tu mensaje..." rows="5" required></textarea>
+                          <button type="submit">Enviar mensaje</button>
+                    </form>
+                    
+                    <!-- Mapa opcional -->
+                <div class="mapa">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.0891158775875!2d-74.755123!3d10.850000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef5cb7e2e0f5f3b%3A0x6cfeb62a5a657eef!2sSan%20Antonio%2C%20Malambo%2C%20Atl%C3%A1ntico!5e0!3m2!1ses-419!2sco!4v1713526852041!5m2!1ses-419!2sco"
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+
+
+/* Contacto - Estilos generales */
+.contacto {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.contacto h2 {
+  color: #d16e8d;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.contacto p {
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+/* Grid de contacto (info + formulario) */
+.contacto-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+/* Información de contacto */
+.info-contacto {
+  flex: 1;
+  min-width: 250px;
+}
+
+.info-contacto p {
+  margin-bottom: 1rem;
+}
+
+.info-contacto a {
+  color: #d16e8d;
+  text-decoration: none;
+}
+
+/* Formulario */
+.formulario-contacto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formulario-contacto .fila-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.formulario-contacto .fila-inputs input {
+  flex: 1 1 45%;
+  min-width: 200px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.formulario-contacto textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* Botón de enviar */
+.formulario-contacto button {
+  width: fit-content;
+  padding: 0.75rem 1.5rem;
+  background-color: #f89cab;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+
+}
+
+
+
+
+
+
+
+
+ChatGPT Plus
+Gracias por compartir el código. El problema de que la sección de contacto esté "arrecostada" hacia la derecha probablemente se debe a un error de cierre de etiquetas HTML y a cómo estás estructurando las clases del formulario.
+
+Aquí están los problemas clave:
+
+✅ 1. Etiqueta </div> mal cerrada
+Tienes esto:
+
+<div/>
+Debe ser:
+
+</div>
+Ese div mal cerrado puede romper el diseño del flex, haciendo que los elementos se alineen mal o se desborden.
+
+✅ 2. Clase duplicada formulario-contacto en un input
+Estás usando:
+
+<input type="text" name="nombre" class="formulario-contacto" ...>
+Esto no es correcto. La clase formulario-contacto está pensada para el formulario completo, no para un input. Ese input hereda los estilos del formulario de forma natural, así que debes remover esa clase del input.
+
+✅ 3. Sugerencia de media query para responsive
+Aunque ya usas flex-wrap y min-width, sería más seguro agregar un media query para pantallas pequeñas y asegurarte de que todo se centre:
+
+@media (max-width: 768px) {
+  .contacto-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .formulario-contacto,
+  .info-contacto {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+✅ 4. Asegúrate de que no haya overflow-x
+Agrega esto si no está ya:
+
+html, body {
+  overflow-x: hidden;
+}
+✅ 5. Corrige el HTML final
+Aquí te dejo la versión corregida del fragmento HTML clave:
+
+<div class="contacto-grid">
+  <div class="info-contacto">
+    <p><strong>📍 Dirección:</strong> Carrera 1g # 7-11, San Antonio, Malambo, Atlántico</p>
+    <p><strong>📞 Teléfono:</strong> +57 3175853510</p>
+    <p><strong>📱 WhatsApp:</strong> <a href="https://wa.me/573175853510" target="_blank">Chatear</a></p>
+    <p><strong>📧 Correo:</strong> haroldiazmelendez@gmail.com</p>
+  </div>
+
+  <form class="formulario-contacto" action="https://formspree.io/f/mgvagnez" method="POST">
+    <div class="fila-inputs">
+      <input type="text" name="nombre" placeholder="Nombre" required>
+      <input type="tel" name="telefono" pattern="[0-9]{10}" placeholder="Teléfono Ej: 5551234567" required>
+    </div>
+    <input type="email" placeholder="Email:" name="_replyto" required>
+    <textarea placeholder="Tu mensaje..." name="mensaje" rows="5" required></textarea>
+    <button type="submit">Enviar mensaje</button>
+  </form>
+
+  <div class="mapa">
+    <iframe src="..." width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+¿Quieres que te prepare el bloque completo corregido para copiar y pegar directamente en tu proyecto?
+
+Tú dijiste:
+si
+ChatGPT Plus
+Perfecto, aquí tienes el bloque HTML completo corregido junto con el CSS actualizado para responsive:
+
+✅ HTML corregido:
+<section class="contacto" id="contacto">
+  <div class="container">
+    <h2>Contacto</h2>
+    <p>¿Quieres hacer un pedido o tienes preguntas? ¡Escríbenos!</p>
+
+    <div class="contacto-grid">
+      <div class="info-contacto">
+        <p><strong>📍 Dirección:</strong> Carrera 1g # 7-11, San Antonio, Malambo, Atlántico</p>
+        <p><strong>📞 Teléfono:</strong> +57 3175853510</p>
+        <p><strong>📱 WhatsApp:</strong> <a href="https://wa.me/573175853510" target="_blank">Chatear</a></p>
+        <p><strong>📧 Correo:</strong> haroldiazmelendez@gmail.com</p>
+      </div>
+
+      <form class="formulario-contacto" action="https://formspree.io/f/mgvagnez" method="POST">
+        <div class="fila-inputs">
+          <input type="text" name="nombre" placeholder="Nombre" required>
+          <input type="tel" name="telefono" pattern="[0-9]{10}" placeholder="Teléfono Ej: 5551234567" required>
+        </div>
+        <input type="email" name="_replyto" placeholder="Email:" required>
+        <textarea name="mensaje" placeholder="Tu mensaje..." rows="5" required></textarea>
+        <button type="submit">Enviar mensaje</button>
+      </form>
+
+      <div class="mapa">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.0891158775875!2d-74.755123!3d10.850000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef5cb7e2e0f5f3b%3A0x6cfeb62a5a657eef!2sSan%20Antonio%2C%20Malambo%2C%20Atl%C3%A1ntico!5e0!3m2!1ses-419!2sco!4v1713526852041!5m2!1ses-419!2sco"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+✅ CSS adicional para responsive:
+@media (max-width: 768px) {
+  .contacto-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .formulario-contacto,
+  .info-contacto {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .formulario-contacto .fila-inputs {
+    flex-direction: column;
+  }
+
+  .formulario-contacto .fila-inputs input {
+    min-width: unset;
+  }
+}
+
+html, body {
+  overflow-x: hidden;
+}
+Con esto tu sección de contacto debería estar perfectamente centrada y ordenada en modo responsive. ¿Te gustaría que también te genere una vista previa estilo mockup o imagen de cómo se ve?
+
+Tú dijiste:
+si
+ChatGPT Plus
+
+Imagen creada
+Imagen generada
+Imagen generada
+Imagen generada
+
+Valorar esta imagen
+
+
+Tú dijiste:
+tengo este html y quiero revisar seccion por seccion optimizar el css te voy a ir compartiendo cada seccion
+ChatGPT Plus
+Perfecto, compárteme la primera sección y con gusto reviso su HTML y optimizo el CSS correspondiente. ¿Cuál sección quieres revisar primero?
+
+Tú dijiste:
+</head>
+
+    <!-- Lightbox container -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+  <a class="prev">&#10094;</a>  <!-- Flecha izquierda -->
+  <a class="next">&#10095;</a>  <!-- Flecha derecha -->
+</div>
+
+   <body>
+
+<header class="header" id="main-header">
+  <div class="container">
+    <!-- Logo de la pastelería -->
+    <h1 class="logo">
+      <a href="#">PastryLand</a>
+    </h1>
+
+    <!-- Barra de navegación -->
+    <nav class="nav">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>  
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Botón de llamada a la acción -->
+    <div class="cta">
+      <a href="#contacto" class="btn">Haz tu pedido</a>
+    </div>
+  </div>
+    <div class="container">
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button> <!-- Ícono hamburguesa -->
+    <nav>
+      <ul id="menu">
+
+    </nav>
+  </div>  
+</header>
+        
+    <main>
+
 /* ============================================
    RESET Y FUENTES
 ============================================ */
@@ -207,38 +790,243 @@ body {
 .cta .btn:hover {
   background-color: #ffdf00;
 }
+ChatGPT Plus
+Memoria guardada actualizada
+Gracias por compartir la primera sección. Aquí tienes un análisis con sugerencias de optimización para el header y CSS relacionado:
+
+✅ Errores/Detalles a corregir:
+Cierre de etiquetas mal hecho:
+
+El <ul id="menu"> está vacío y mal cerrado (falta </ul>).
+
+Hay un </head> suelto al inicio. El contenido mostrado va en <body>.
+
+Redundancias en .container:
+
+Tienes dos reglas para .container con valores similares. Deja solo una versión global y reutilízala.
+
+El botón hamburguesa (menu-toggle) está fuera del flujo visual del header.
+
+Debería estar dentro del mismo .container del header, junto al nav si es para móvil.
+
+💡 CSS optimizado (header, navegación y botón hamburguesa):
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografía */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background-color: #fffaf5;
+  padding-top: 80px;
+}
+
+/* Contenedor reutilizable */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Header fijo */
+.header {
+  background-color: #d16e8d;
+  color: #fff;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.header.scrolled {
+  background-color: #ffe2e2;
+}
+
+/* Logo */
+.logo a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Navegación */
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 5px 0;
+  transition: color 0.3s, transform 0.3s;
+  position: relative;
+}
+
+.nav li a:hover {
+  color: #ffd700;
+  transform: translateY(-5px);
+}
+
+.nav li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #ffd700;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-out;
+}
+
+.nav li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Botón CTA */
+.cta .btn {
+  background-color: #ffd700;
+  color: #2091F9;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cta .btn:hover {
+  background-color: #ffdf00;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
 
 
-/* Nosotros*/
-.nosotros {
-  padding: 4rem 2rem;
+.inicio {
   background-color: #fff0f5;
+  padding: 80px 0;
   text-align: center;
 }
 
-.nosotros-container {
+.inicio .container {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.inicio .intro {
+  flex: 1 1 500px;
+  text-align: left;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.inicio .intro h1 {
+  font-size: 2.5rem;
+  color: #d16e8d;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.inicio .intro p {
+  font-size: 1.125rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.inicio .cta-btn {
+  padding: 14px 28px;
+  background-color: #d16e8d;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  animation: fadeInUp 1.8s ease-out;
+}
+
+.inicio .cta-btn:hover {
+  background-color: #b85c78;
+  transform: translateY(-2px);
+}
+
+.inicio .hero-image {
+  flex: 1 1 500px;
+  animation: fadeInUp 2s ease-out;
+}
+
+.inicio .hero-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Sección Nosotros */
+.nosotros {
+  padding: 4rem 2rem;
+  background-color: #fff0f5;
+}
+
+.nosotros .container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
-  padding: 4rem 0;
-  flex-wrap: wrap;
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.nosotros .container:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
 }
 
 .nosotros h2 {
-  font-size: 2rem;
-  color: #d16e8d;
+  font-size: 2.5rem;
+  color: #f67289;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .nosotros p {
-  max-width: 800px;
-  margin: 0 auto 1rem;
   font-size: 1.1rem;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #555;
+  margin-bottom: 1rem;
 }
 
-
+/* Imagen */
 .nosotros-img {
   flex: 1;
   min-width: 300px;
@@ -247,7 +1035,7 @@ body {
 .nosotros-img img {
   width: 100%;
   border-radius: 20px;
-  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.5s;
 }
 
@@ -255,61 +1043,32 @@ body {
   transform: scale(1.05);
 }
 
+/* Texto */
 .nosotros-texto {
   flex: 1;
   min-width: 300px;
 }
 
-.nosotros-texto h2 {
-  font-size: 2.5rem;
-  color: #f67289;
-  margin-bottom: 1rem;
-}
-
-.nosotros-texto p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 1rem;
-}
-
-/* Animación general */
+/* Animaciones */
 .animate-on-scroll {
   opacity: 0;
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* Animación específica para imagen (desde la izquierda) */
 .animate-on-scroll.imagen {
   transform: translateX(-50px);
 }
 
-/* Animación específica para texto (desde la derecha) */
 .animate-on-scroll.texto {
   transform: translateX(50px);
 }
 
-
-/* Cuando el elemento es visible */
 .animate-on-scroll.visible {
   opacity: 1;
   transform: translateX(0);
 }
 
-
-.nosotros .container {
-  background: #ffffff;
-  padding: 2rem;
-  border-radius: 1rem;
-  transition: box-shadow 0.4s ease, transform 0.4s ease;
-}
-
-/* Efecto al pasar el mouse */
-.nosotros .container:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  transform: translateY(-5px);
-}
-
-/*Productos*/
+/* Sección Productos */
 .productos {
   padding: 4rem 2rem;
   background-color: #fff;
@@ -317,45 +1076,52 @@ body {
 }
 
 .productos h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #d16e8d;
   margin-bottom: 2rem;
 }
 
+/* Grid responsive */
 .grid-productos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
 }
 
+/* Card de producto */
 .producto {
   background-color: #fffaf5;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 15px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  transition: transform 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .producto:hover {
   transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .producto img {
   width: 100%;
   border-radius: 10px;
+  height: auto;
 }
 
 .producto h3 {
-  margin-top: 0.8rem;
+  margin-top: 1rem;
   color: #a04e63;
+  font-size: 1.25rem;
 }
 
 .producto p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #555;
+  margin-top: 0.5rem;
 }
 
-/*Galeria*/
+
+/* Sección Galería */
 .galeria {
   padding: 4rem 1rem;
   background-color: #fff0f5;
@@ -363,7 +1129,7 @@ body {
 }
 
 .galeria h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #d16e8d;
   margin-bottom: 0.5rem;
 }
@@ -373,50 +1139,38 @@ body {
   color: #555;
 }
 
+/* Grid de imágenes */
 .grid-galeria {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
 }
-.galeria .grid-galeria {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columnas */
-  grid-template-rows: repeat(3, 1fr); /* 3 filas */
-  gap: 1rem; /* Espacio entre las imágenes */
-}
 
 .galeria img {
   width: 100%;
   height: auto;
-  object-fit: cover; /* Asegura que las imágenes se ajusten bien sin distorsionarse */
-  border-radius: 8px; /* Bordes redondeados para un efecto más suave */
-}
-
-.galeria img {
-  width: 100%;
-  height: auto; /* Altura fija para todas las imágenes */
-  object-fit: cover; /* Que rellenen el espacio recortando si es necesario */
+  object-fit: cover;
   border-radius: 8px;
-  transition: transform 0.3s ease; /* Opcional: animación suave */
+  transition: transform 0.3s ease;
 }
 
 .galeria img:hover {
-  transform: scale(1.05); /* Efecto zoom al pasar el mouse */
+  transform: scale(1.05);
 }
 
 /* Lightbox */
 .lightbox {
-  display: none; /* Oculto por defecto */
+  display: none;
   position: fixed;
   z-index: 1000;
-  padding-top: 60px;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  padding-top: 60px;
+  background-color: rgba(0, 0, 0, 0.8);
   overflow: auto;
-  background-color: rgba(0,0,0,0.8); /* Fondo negro semi-transparente */
-  animation: fadeIn 0.5s; /* Animación de entrada */
+  animation: fadeIn 0.5s;
 }
 
 .lightbox-content {
@@ -425,11 +1179,10 @@ body {
   max-width: 80%;
   max-height: 80%;
   border-radius: 10px;
-  transform: scale(0.8); /* Empezar más pequeño */
-  animation: zoomIn 0.5s forwards; /* Animación de zoom al abrir */
+  transform: scale(0.8);
+  animation: zoomIn 0.5s forwards;
 }
 
-/* Animación de zoom */
 @keyframes zoomIn {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
@@ -439,42 +1192,30 @@ body {
   position: absolute;
   top: 20px;
   right: 45px;
-  color: #fff;
   font-size: 40px;
-  font-weight: bold;
+  color: #fff;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
-.close:hover,
-.close:focus {
+.close:hover {
   color: #f67289;
-  text-decoration: none;
-  cursor: pointer;
 }
 
-/* Flechas de navegación */
+/* Navegación del lightbox */
 .prev, .next {
-  cursor: pointer;
   position: absolute;
   top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: #fff;
-  font-weight: bold;
   font-size: 40px;
-  user-select: none;
-  transition: 0.3s;
+  color: #fff;
+  padding: 16px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: color 0.3s;
 }
 
-.next {
-  right: 20px;
-}
-
-.prev {
-  left: 20px;
-}
+.prev { left: 20px; }
+.next { right: 20px; }
 
 .prev:hover, .next:hover {
   color: #f67289;
@@ -482,303 +1223,57 @@ body {
 
 
 
-/* Contacto - Estilos generales */
-.contacto {
-  padding: 4rem 2rem;
-  background-color: #fff;
-  text-align: center;
-
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-   
-}
-
-.contacto h2 {
-  color: #d16e8d;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.contacto p {
-  margin-bottom: 2rem;
-  color: #555;
-}
-
-/* Grid de contacto (info + formulario) */
-.contacto-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  align-items: flex-start;
-  margin-top: 2rem;
-}
-
-/* Información de contacto */
-.info-contacto {
-  flex: 1;
-  min-width: 250px;
-}
-
-.info-contacto p {
-  margin-bottom: 1rem;
-}
-
-.info-contacto a {
-  color: #d16e8d;
-  text-decoration: none;
-}
-
-/* Formulario */
-.formulario-contacto {
-  flex: 1;
-  min-width: 300px;
-}
-
-.contacto form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.formulario-contacto .fila-inputs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.formulario-contacto .fila-inputs input {
-  flex: 1 1 45%;
-  min-width: 200px;
-}
-
-.formulario-contacto input,
-.formulario-contacto textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-}
-
-.formulario-contacto textarea {
-  min-height: 150px;
-  resize: vertical;
-}
-
-/* Botón de enviar */
-.formulario-contacto button {
-  width: fit-content;
-  padding: 0.75rem 1.5rem;
-  background-color: #f89cab;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  align-self: center;
-
-}
-
-
-
-/*Footer*/
-
-footer {
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px;
-}
-
-.footer-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-.footer-nav ul li {
-  margin-right: 20px;
-}
-
-.footer-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.footer-nav ul li a:hover {
-  color: #f39c12;
-}
-
-.footer-info p {
-  margin: 0;
-  font-size: 14px;
-}
-
-
-.footer .redes-sociales a {
-  color: #2091F9;
-  text-decoration: none;
-  margin: 0 5px;
-  font-weight: bold;
-}
-
-.footer .redes-sociales a:hover {
-  text-decoration: underline;
-}
-
-
-
-/* Botón hamburguesa */
-.menu-toggle {
-  display: none;
-  font-size: 30px;
-  color: #FFF;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-
-
-@media (max-width: 1200px) {
-  .galeria .grid-galeria {
-    grid-template-columns: repeat(4, 2fr); /* 3 columnas en pantallas medianas */
-  }
-}
-
-@media (max-width: 800px) {
-  .galeria .grid-galeria {
-    grid-template-columns: repeat(2, 2fr); /* 2 columnas en pantallas pequeñas */
-  }
-}
-/*d16e8d color Rosa*/
-
-/* Mobile (hasta 768px) */
+/* Responsive */
 @media (max-width: 768px) {
-     .galeria .grid-galeria {
-    grid-template-columns: repeat(1, 2fr); /* 2 columnas en pantallas pequeñas */
-  }
-}
-/* .header .container {
-  background-color: #d16e8d;  Color del fondo 
-  color: #fff; Color del texto 
-  padding: 1rem 0;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 100;
-}
-   
   .nav ul {
-    /*flex-direction: column;*/
-   /* gap: 10px;
+    display: none;
+    flex-direction: column;
     background-color: #d16e8d;
     position: absolute;
-    top: 60px;
-    left: 0;
+    top: 100%;
+    right: 0;
     width: 100%;
     padding: 1rem 0;
-    display: none;
   }
 
-  .nav ul.active {
+  .nav ul.show {
     display: flex;
   }
 
-  .nav-toggle {
+  .menu-toggle {
     display: block;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: white;
   }
 
   .cta {
-    display: none; /* Oculta el botón si lo deseas o adáptalo */
-/*  }
+    display: none; /* Ocultamos el botón para móviles, opcional */
+  }
 
-  .inicio .intro h1 {
+   .inicio .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .inicio .intro {
+    text-align: center;
+  }
+
+  .inicio .cta-btn {
+    margin-top: 20px;
+  }
+
+   .nosotros .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nosotros-texto h2 {
     font-size: 2rem;
   }
 
-  .inicio .hero-image,
   .nosotros-img,
   .nosotros-texto {
-    padding: 0;
-  }
-
-   .contacto {
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-   }
-
-  .contacto-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-/*
-  .formulario-contacto,
-  .info-contacto {
-    width: 100%;
-    max-width: 500px;
-  }
-
-  .formulario-contacto .fila-inputs {
-    flex-direction: column;
-  }
-
-  .formulario-contacto .fila-inputs input {
     min-width: unset;
-  }*/
-/*
-
-html, body {
-  overflow-x: hidden;
-}
-   
-  /* Botón hamburguesa para móviles */
-/*.menu-toggle {
-  display: none;
-  font-size: 30px;
-  color: #fff;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
+  }
 
    
-
-/* Menú responsive */
-/*nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  padding: 0;
-  margin: 0;
-}*/
-
-/*nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
 }
-}*/
