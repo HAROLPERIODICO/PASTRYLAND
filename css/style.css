@@ -729,12 +729,18 @@ body {
     flex-direction: column;
     text-align: center;
   }
-
+   /* Grid responsive */
+.grid-galeria {
+  display: grid;
+grid-template-columns: repeat(2, 2fr);
+  /*grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));*/
+  gap: 2rem;
+}
    /* Grid responsive */
 .grid-productos {
   display: grid;
-/* grid-template-columns: repeat(4, 1fr);*/
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+grid-template-columns: repeat(2, 2fr);
+  /*grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));*/
   gap: 2rem;
 }
 
