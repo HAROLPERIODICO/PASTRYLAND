@@ -180,7 +180,7 @@ body {
 }
 
 .inicio .cta-btn {
-  padding: 14px 28px;
+  padding: 10px;
   background-color: #d16e8d;
   color: #fff;
   font-size: 1em;
@@ -189,7 +189,7 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   animation: fadeInUp 1.8s ease-out;
-  text-align: center;
+  
 }
 
 .inicio .cta-btn:hover {
@@ -209,7 +209,9 @@ body {
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
-
+.inicio-img img:hover {
+  transform: scale(1.05);
+}
 /* ============================================
    ANIMACIONES
 ============================================ */
