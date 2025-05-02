@@ -11,7 +11,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  /*font-family: 'Segoe UI', sans-serif;*/
   color: #333;
   background-color: #fffaf5;
   padding-top: 80px; /* Espacio para el header fijo */
@@ -625,9 +625,9 @@ body {
 
    /* Contenedor reutilizable */
 .container {
-  /*max-width: 1200px;*/
+  max-width: 760px;
   margin: auto;
-  padding: 0 20px;
+  padding: 0 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
