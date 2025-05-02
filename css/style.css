@@ -177,9 +177,6 @@ body {
   margin-bottom: 30px;
 }
 
-.cta {
-    display: none; /* Ocultamos el botón para móviles, opcional */
-  }
 
 .inicio .cta-btn {
   width: 200px; 
@@ -212,12 +209,6 @@ body {
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
-
-.menu-toggle {
-    display: block;
-  }
-
-
 
 /* Imagen */
 .inicio-img {
@@ -675,7 +666,19 @@ body {
 
 /* Para pantallas de hasta 768px (tablets y móviles) */
 @media (max-width: 768px) {
+   .cta {
+    display: none; /* Ocultamos el botón para móviles, opcional */
+   }
 
+/* Botón hamburguesa */
+.menu-toggle {
+  display: block;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
    .grid-producto {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
