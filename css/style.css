@@ -670,9 +670,10 @@ body {
   gap: 1rem;
 }
    
-  .grid contacto{
-    flex-direction: column;
-    align-items: center;
+  .grid-contacto{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    
   }
 
   .fila-inputs {
