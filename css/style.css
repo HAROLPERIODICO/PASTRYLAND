@@ -658,105 +658,68 @@ body {
 
 
 /* Responsive */
+
+
+/* Para pantallas de hasta 768px (tablets y móviles) */
 @media (max-width: 768px) {
-body {
-  /*font-family: 'Segoe UI', sans-serif;*/
-  color: #333;
-  background-color: #fffaf5;
-  padding-top: 10px; /* Espacio para el header fijo */
-}
-
-   /* Contenedor reutilizable */
-.container {
-  max-width: 760px;
-  margin: auto;
-  padding: 0 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-  .nav ul {
-    display: none;
+  .contacto-grid {
     flex-direction: column;
-    background-color: #d16e8d;
-    position: absolute;
-    top: 100%;
-    right: 0;
+    align-items: center;
+  }
+
+  .fila-inputs {
+    flex-direction: column;
+  }
+
+  .fila-inputs input {
     width: 100%;
-    padding: 1rem 0;
-  }
-
-  .nav ul.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .cta {
-    display: none; /* Ocultamos el botón para móviles, opcional */
-  }
-
-   .inicio .container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .inicio .intro {
-    text-align: center;
-  }
-
-  .inicio .cta-btn {
-    margin-top: 20px;
-  }
-
-   .nosotros .container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .nosotros-texto h2 {
-    font-size: 2rem;
-  }
-
-  .nosotros-img,
-  .nosotros-texto {
     min-width: unset;
   }
 
-.producto .container {
-    flex-direction: column;
-    text-align: center;
+  .formulario-contacto {
+    width: 100%;
   }
-   /* Grid responsive */
-.grid-galeria {
-  display: grid;
-grid-template-columns: repeat(2, 2fr);
-  /*grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));*/
-  gap: 2rem;
-}
-   /* Grid responsive */
-.grid-productos {
-  display: grid;
-grid-template-columns: repeat(2, 2fr);
-  /*grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));*/
-  gap: 2rem;
-}
 
-.footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .info-contacto,
+  .formulario-contacto {
+    width: 100%;
+    max-width: 500px;
   }
 
   .footer-nav ul {
     flex-direction: column;
+    align-items: center;
     gap: 0.5rem;
   }
 
-  .footer-nav ul li {
-    margin: 0;
+  .redes-sociales-iconos {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
-   
 }
+
+/* Para pantallas muy pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+
+  .formulario-contacto button {
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .icono-social {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .footer-info p {
+    font-size: 12px;
+  }
+}
+
