@@ -155,10 +155,14 @@ body {
   transform: translateY(-5px);
 }
 
+.inicio-img img:hover {
+  transform: scale(1.05);
+}
+
 .inicio .intro {
   flex: 1 1 500px;
   padding: 20px;
-  text-align: left;
+  text-align: center;
   animation: fadeInUp 1.5s ease-out;
 }
 
@@ -185,6 +189,7 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   animation: fadeInUp 1.8s ease-out;
+  text-align: center;
 }
 
 .inicio .cta-btn:hover {
