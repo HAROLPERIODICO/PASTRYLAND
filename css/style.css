@@ -155,12 +155,12 @@ body {
   transform: translateY(-5px);
 }
 
-.inicio .intro {
+/*.inicio .intro {
   flex: 1 1 500px;
   padding: 20px;
   text-align: left;
   animation: fadeInUp 1.5s ease-out;
-}
+}*/
 
 .inicio .intro h1 {
   font-size: 2.5em;
