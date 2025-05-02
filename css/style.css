@@ -334,7 +334,7 @@ body {
 
 .grid-productos {
   display: grid;
- grid-template-columns: repeat(4, 1fr);
+ grid-template-columns: repeat(2, 1fr);
   /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
   gap: 2rem;
 }
@@ -662,7 +662,15 @@ body {
 
 /* Para pantallas de hasta 768px (tablets y móviles) */
 @media (max-width: 768px) {
-  .contacto-grid {
+
+   .grid-producto {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  /*grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));*/
+  gap: 1rem;
+}
+   
+  .grid contacto{
     flex-direction: column;
     align-items: center;
   }
