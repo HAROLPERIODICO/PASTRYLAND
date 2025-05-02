@@ -357,12 +357,14 @@ body {
 .galeria h2 {
   font-size: 2.5rem;
   color: #d16e8d;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+   text-align: center;
 }
 
 .galeria p {
   margin-bottom: 2rem;
   color: #555;
+  margin-top: 0.5rem;
 }
 
 /* Grid de imágenes */
