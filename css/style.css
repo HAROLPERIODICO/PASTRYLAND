@@ -622,6 +622,12 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+body {
+  /*font-family: 'Segoe UI', sans-serif;*/
+  color: #333;
+  background-color: #fffaf5;
+  padding-top: 10px; /* Espacio para el header fijo */
+}
 
    /* Contenedor reutilizable */
 .container {
