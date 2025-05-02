@@ -334,6 +334,12 @@ body {
   height: auto;
 }
 
+/* Texto producto */
+.producto-texto {
+  flex: 1;
+  min-width: 300px;
+}
+
 .producto h3 {
   margin-top: 1rem;
   color: #a04e63;
