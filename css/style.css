@@ -622,6 +622,16 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+
+   /* Contenedor reutilizable */
+.container {
+  /*max-width: 1200px;*/
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
   .nav ul {
     display: none;
     flex-direction: column;
