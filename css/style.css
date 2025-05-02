@@ -155,10 +155,6 @@ body {
   transform: translateY(-5px);
 }
 
-.inicio-img img:hover {
-  transform: scale(1.05);
-}
-
 .inicio .intro {
   flex: 1 1 500px;
   padding: 20px;
@@ -180,6 +176,7 @@ body {
 }
 
 .inicio .cta-btn {
+  width: 200px; 
   padding: 10px;
   background-color: #d16e8d;
   color: #fff;
@@ -209,6 +206,21 @@ body {
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
+
+/* Imagen */
+.inicio-img {
+  flex: 1;
+  min-width: 300px;
+}
+
+.inicio-img img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s;
+}
+
+
 .inicio-img img:hover {
   transform: scale(1.05);
 }
