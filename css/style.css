@@ -322,7 +322,8 @@ body {
 .productos h2 {
   font-size: 2rem;
   color: #d16e8d;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+   text-align: center;
 }
 
 .grid-productos {
@@ -660,14 +661,12 @@ body {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   /*grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));*/
-  gap: 1rem;
 }
 
    .grid-galeria {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   /*grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));*/
-  gap: 1rem;
    }
    
   .grid-contacto{
