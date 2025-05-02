@@ -166,7 +166,7 @@ body {
 }
 
 .inicio .intro p {
-  font-size: 1.125em;
+  font-size: 2em;
   color: #555;
   margin-bottom: 30px;
 }
@@ -336,6 +336,7 @@ body {
 
 /* Texto producto */
 .producto-texto {
+  font-size: 2rem;
   flex: 1;
   min-width: 300px;
 }
@@ -351,7 +352,6 @@ body {
   color: #555;
   margin-top: 0.5rem;
 }
-
 
 /* Sección Galería */
 .galeria {
