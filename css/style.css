@@ -303,7 +303,7 @@ body {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 .productos h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #d16e8d;
   margin-bottom: 2rem;
 }
@@ -312,7 +312,7 @@ body {
 .grid-productos {
   display: grid;
  /* grid-template-columns: repeat(4, 1fr);*/
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
 }
 
@@ -337,7 +337,7 @@ body {
 .producto h3 {
   margin-top: 1rem;
   color: #a04e63;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .producto p {
