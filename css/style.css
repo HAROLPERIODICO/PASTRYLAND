@@ -166,7 +166,7 @@ body {
 }
 
 .inicio .intro p {
-  font-size: 2em;
+  font-size: 1.5em;
   color: #555;
   margin-bottom: 30px;
 }
@@ -223,7 +223,7 @@ body {
 
 .nosotros .container {
   background: #fff;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 1rem;
   display: flex;
   flex-wrap: wrap;
@@ -294,12 +294,14 @@ body {
 }
 
 /* Sección Productos */
-.productos {
-  padding: 4rem 2rem;
-  background-color: #fff;
-  text-align: center;
+/* Card de producto */
+.producto {
+  background-color: #fffaf5;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-
 .productos h2 {
   font-size: 2.5rem;
   color: #d16e8d;
@@ -309,18 +311,9 @@ body {
 /* Grid responsive */
 .grid-productos {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  /*grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));*/
+ /* grid-template-columns: repeat(4, 1fr);*/
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-}
-
-/* Card de producto */
-.producto {
-  background-color: #fffaf5;
-  padding: 1.5rem;
-  border-radius: 15px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .producto:hover {
@@ -348,7 +341,7 @@ body {
 }
 
 .producto p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #555;
   margin-top: 0.5rem;
 }
