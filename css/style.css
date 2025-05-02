@@ -306,6 +306,7 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .productos h2 {
   font-size: 2rem;
   color: #d16e8d;
@@ -704,6 +705,11 @@ body {
   .nosotros-img,
   .nosotros-texto {
     min-width: unset;
+  }
+
+.producto .container {
+    flex-direction: column;
+    text-align: center;
   }
 .footer-container {
     flex-direction: column;
