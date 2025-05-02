@@ -669,6 +669,13 @@ body {
   /*grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));*/
   gap: 1rem;
 }
+
+   .grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /*grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));*/
+  gap: 1rem;
+   }
    
   .grid-contacto{
     display: grid;
