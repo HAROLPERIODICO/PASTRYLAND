@@ -130,92 +130,80 @@ a {
 .inicio {
   background-color: #fffaf5;
   padding: 80px 0;
-  text-align: center;
 }
 
 .inicio .container {
-  background: #fff;
-  padding: 1.5rem;
+  background-color: #fff;
+  padding: 2rem;
   border-radius: 1rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
   transition: box-shadow 0.4s ease, transform 0.4s ease;
 }
 
 .inicio .intro {
-  flex: 1 1 500px;
-  padding: 20px;
+  flex: 1 1 400px;
   text-align: center;
   animation: fadeInUp 1.5s ease-out;
 }
 
 .inicio .intro h1 {
-  font-size: 2.5em;
+  font-size: 2.5rem;
   color: #d16e8d;
   margin-bottom: 20px;
   font-weight: 600;
 }
 
-.inicio .intro p {
-  font-size: 1.5em;
-  color: #555;
-  margin-bottom: 30px;
+.inicio .intro h1 span {
+  color: #ffd700;
 }
 
-/* Texto */
-.inicio-texto {
-  flex: 1;
-  min-width: 300px;
+.inicio .intro p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
 }
-.inicio .cta-btn {   
+
+.inicio .cta-btn {
   background-color: #f89cab;
   color: #fff;
-  padding: 10px 20px;
-  border-radius: 15px;
-  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 20px;
   font-weight: bold;
-  width: 200px;
-  margin: 0 auto;
-  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .inicio .cta-btn:hover {
   background-color: #e07692;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 .inicio .hero-image {
-  flex: 1 1 500px;
-  padding: 20px;
+  flex: 1 1 400px;
+  text-align: center;
   animation: fadeInUp 2s ease-out;
 }
 
 .inicio .hero-image img {
   width: 100%;
   max-width: 500px;
-  border-radius: 12px;
+  border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-/* Imagen */
-.inicio-img {
-  flex: 1;
-  min-width: 300px;
-}
-
-.inicio-img img {
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.5s;
+.inicio .hero-image img:hover {
+  transform: scale(1.03);
 }
 
 
-.inicio-img img:hover {
-  transform: scale(1.05);
-}
 /* ============================================
    ANIMACIONES
 ============================================ */
@@ -229,6 +217,7 @@ a {
     transform: translateY(0);
   }
 }
+
 
 /* Sección Nosotros */
 .nosotros {
@@ -684,5 +673,30 @@ a {
     width: 100%;
     text-align: center;
   }
+
+  .inicio .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .inicio .hero-image,
+  .inicio .intro {
+    flex: 1 1 100%;
+  }
+
+  .inicio .intro h1 {
+    font-size: 2rem;
+  }
+
+  .inicio .intro p {
+    font-size: 1rem;
+  }
+
+  .inicio .cta-btn {
+    width: 100%;
+    max-width: 250px;
+    margin-top: 1rem;
+  }
 }
+
 
