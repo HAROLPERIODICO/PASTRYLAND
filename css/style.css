@@ -485,6 +485,13 @@ a {
   animation: fadeInCaption 0.6s forwards;
 }
 
+/* Grid de imágenes */
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas en desktop */
+  gap: 1rem;
+}
+
 @keyframes fadeInCaption {
   to {
     opacity: 1;
@@ -694,6 +701,10 @@ a {
     flex: 1 1 48%;
   }
 
+  .grid-galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
   .footer-contenido {
     flex-direction: row;
     justify-content: space-between;
@@ -797,7 +808,9 @@ a {
   .galeria img {
     height: 180px;
   }
-
+  .grid-galeria {
+    grid-template-columns: 1fr;
+  }
   .contacto-grid {
     flex-direction: column;
     align-items: center;
