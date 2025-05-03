@@ -702,7 +702,7 @@ a {
   }
 
   .grid-galeria {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   
   .footer-contenido {
@@ -808,9 +808,11 @@ a {
   .galeria img {
     height: 180px;
   }
+ 
   .grid-galeria {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
+  
   .contacto-grid {
     flex-direction: column;
     align-items: center;
@@ -873,7 +875,12 @@ a {
   }
 }
 
-
+/* Responsive: 1 columna en móviles */
+@media (max-width: 576px) {
+  .grid-galeria {
+    grid-template-columns: 1fr;
+  }
+}
 
 
 
