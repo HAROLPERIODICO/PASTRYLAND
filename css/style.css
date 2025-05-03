@@ -218,20 +218,22 @@ a {
   }
 }
 
-
-/* Sección Nosotros */
+/* ============================================
+   SECCIÓN: NOSOTROS
+============================================ */
 .nosotros {
   padding: 4rem 2rem;
   background-color: #fff0f5;
 }
 
 .nosotros .container {
-  background: #fff;
-  padding: 1.5rem;
+  background-color: #fff;
   border-radius: 1rem;
+  padding: 2rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
   transition: box-shadow 0.4s ease, transform 0.4s ease;
 }
@@ -242,53 +244,53 @@ a {
 }
 
 .nosotros h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #f67289;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   text-align: center;
 }
 
 .nosotros p {
-  font-size: 1.5rem;
-  line-height: 1.7;
+  font-size: 1.2rem;
   color: #555;
+  line-height: 1.7;
   margin-bottom: 1rem;
 }
 
-/* Imagen */
 .nosotros-img {
-  flex: 1;
-  min-width: 300px;
+  flex: 1 1 400px;
+  text-align: center;
 }
 
 .nosotros-img img {
   width: 100%;
+  max-width: 500px;
   border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.5s;
+  transition: transform 0.5s ease;
 }
 
 .nosotros-img img:hover {
   transform: scale(1.05);
 }
 
-/* Texto */
 .nosotros-texto {
-  flex: 1;
-  min-width: 300px;
+  flex: 1 1 400px;
 }
 
-/* Animaciones */
+/* ============================================
+   ANIMACIONES ON SCROLL
+============================================ */
 .animate-on-scroll {
   opacity: 0;
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-.animate-on-scroll.imagen {
+.animate-on-scroll:not(.visible).nosotros-img {
   transform: translateX(-50px);
 }
 
-.animate-on-scroll.texto {
+.animate-on-scroll:not(.visible).nosotros-texto {
   transform: translateX(50px);
 }
 
@@ -697,6 +699,20 @@ a {
     max-width: 250px;
     margin-top: 1rem;
   }
+
+  .nosotros .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nosotros h2 {
+    font-size: 1.8rem;
+  }
+
+  .nosotros p {
+    font-size: 1rem;
+  }
 }
+
 
 
