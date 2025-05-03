@@ -179,8 +179,8 @@ body {
   min-width: 300px;
 }
 .inicio .cta-btn {   
-  background-color: #2091F9;
-  color: #ffd700;
+  background-color: #f89cab;
+  color: #fff;
   padding: 10px 20px;
   border-radius: 15px;
   text-decoration: none;
@@ -191,7 +191,7 @@ body {
 }
 
 .inicio .cta-btn:hover {
-  background-color: #b85c78;
+  background-color: #e07692;
   transform: translateY(-2px);
 }
 
