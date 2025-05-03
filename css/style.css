@@ -687,22 +687,28 @@ body {
 }
 .grid-producto {
   display: block;
-  grid-template-columns: repeat(1, 1fr);
+ /* grid-template-columns: repeat(1, 1fr);
   /*grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));*/
 }
 
 .grid-galeria {
   display: block;
-  grid-template-columns: repeat(2, 1fr);
+  /*grid-template-columns: repeat(2, 1fr);*/
   /*grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));*/
 }
+.galeria h1, p {
+  width: 200px;
+  margin: 0 auto;
+}
    
-.grid-contacto{
+.contacto-grid {
     display: block;
-    grid-template-columns: repeat(1, 1fr);
-    
+   /* grid-template-columns: repeat(1, 1fr);*/
 }
 
+.formulario-contacto {
+    display: block;
+}
 /*.fila-inputs {
     flex-direction: column;
 }
