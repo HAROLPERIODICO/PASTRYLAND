@@ -1,50 +1,74 @@
-// Seleccionamos elementos
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-const closeBtn = document.querySelector('.close');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
-const images = document.querySelectorAll('.grid-galeria img');
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll(".grid-galeria img");
+  let currentIndex = 0;
 
-let currentIndex = 0;
+  const lightbox = document.createElement("div");
+  lightbox.classList.add("lightbox");
 
-// Función para abrir el lightbox en una imagen específica
-function openLightbox(index) {
-  lightbox.style.display = 'block';
-  lightboxImg.src = images[index].src;
-  lightboxImg.alt = images[index].alt;
-  currentIndex = index;
-}
+  const img = document.createElement("img");
+  img.classList.add("lightbox-content");
 
-// Al hacer clic en una imagen
-images.forEach((image, index) => {
-  image.addEventListener('click', () => {
-    openLightbox(index);
-  });
-});
+  const caption = document.createElement("div");
+  caption.classList.add("lightbox-caption");
 
-// Cerrar el lightbox
-closeBtn.addEventListener('click', () => {
-  lightbox.style.display = 'none';
-});
+  const closeBtn = document.createElement("span");
+  closeBtn.classList.add("close");
+  closeBtn.innerHTML = "&times;";
 
-// Cerrar haciendo clic fuera de la imagen
-lightbox.addEventListener('click', (e) => {
-  if (e.target === lightbox) {
-    lightbox.style.display = 'none';
+  const prevBtn = document.createElement("span");
+  prevBtn.classList.add("prev");
+  prevBtn.innerHTML = "&#10094;";
+
+  const nextBtn = document.createElement("span");
+  nextBtn.classList.add("next");
+  nextBtn.innerHTML = "&#10095;";
+
+  lightbox.appendChild(img);
+  lightbox.appendChild(caption);
+  lightbox.appendChild(closeBtn);
+  lightbox.appendChild(prevBtn);
+  lightbox.appendChild(nextBtn);
+  document.body.appendChild(lightbox);
+
+  function showImage(index) {
+    if (index >= 0 && index < images.length) {
+      img.src = images[index].src;
+      img.alt = images[index].alt;
+      caption.textContent = images[index].alt;
+      currentIndex = index;
+    }
   }
-});
 
-// Ir a la imagen anterior
-prevBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  openLightbox(currentIndex);
-});
+  images.forEach((image, index) => {
+    image.addEventListener("click", () => {
+      showImage(index);
+      lightbox.style.display = "block";
+    });
+  });
 
-// Ir a la imagen siguiente
-nextBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
-  currentIndex = (currentIndex + 1) % images.length;
-  openLightbox(currentIndex);
+  closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
+
+  prevBtn.addEventListener("click", () => {
+    showImage((currentIndex - 1 + images.length) % images.length);
+  });
+
+  nextBtn.addEventListener("click", () => {
+    showImage((currentIndex + 1) % images.length);
+  });
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox || e.target === closeBtn) {
+      lightbox.style.display = "none";
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (lightbox.style.display === "block") {
+      if (e.key === "ArrowLeft") prevBtn.click();
+      if (e.key === "ArrowRight") nextBtn.click();
+      if (e.key === "Escape") closeBtn.click();
+    }
+  });
 });
