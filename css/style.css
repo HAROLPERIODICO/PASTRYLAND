@@ -681,22 +681,30 @@ body {
   cursor: pointer;
 }
 
-.producto h1, producto p {
+.producto h1 {
   width: 200px;
   margin: 0 auto;
 }
+   .producto p  {
+  width: 200px;
+  margin: 0 auto;
+}
+   
 .grid-producto {
-  display: block;
- /* grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   /*grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));*/
 }
 
 .grid-galeria {
-  display: block;
-  /*grid-template-columns: repeat(2, 1fr);*/
+   grid-template-columns: repeat(2, 1fr);
   /*grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));*/
 }
-.galeria h1, p {
+.galeria h1 {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.galeria p {
   width: 200px;
   margin: 0 auto;
 }
