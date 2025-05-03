@@ -664,9 +664,9 @@ body {
 
 /* Para pantallas de hasta 768px (tablets y móviles) */
 @media (max-width: 768px) {
-   .cta {
+.cta {
     display: none; /* Ocultamos el botón para móviles, opcional */
-   }
+}
 
 /* Botón hamburguesa */
 .menu-toggle {
@@ -677,7 +677,7 @@ body {
   color: white;
   cursor: pointer;
 }
-   .grid-producto {
+.grid-producto {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   /*grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));*/
@@ -686,48 +686,48 @@ body {
    display: none;
 }
 
-   .grid-galeria {
+.grid-galeria {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   /*grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));*/
-   }
+}
    
-  .grid-contacto{
+/*.grid-contacto{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     
-  }
+}
 
-  .fila-inputs {
+.fila-inputs {
     flex-direction: column;
-  }
+}
 
-  .fila-inputs input {
+.fila-inputs input {
     width: 100%;
     min-width: unset;
-  }
+}
 
-  .formulario-contacto {
+.formulario-contacto {
     width: 100%;
-  }
+}
 
-  .info-contacto,
-  .formulario-contacto {
+.info-contacto,
+.formulario-contacto {
     width: 100%;
     max-width: 500px;
-  }
+}*/
 
-  .footer-nav ul {
+.footer-nav ul {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-  }
+}
 
-  .redes-sociales-iconos {
+.redes-sociales-iconos {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 0.5rem;
-  }
+}
 }
 
 /* Para pantallas muy pequeñas (hasta 480px) */
