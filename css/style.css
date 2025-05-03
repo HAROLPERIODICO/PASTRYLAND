@@ -475,6 +475,12 @@ a {
   color: #f67289;
 }
 
+.lightbox-caption {
+  color: #fff;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
 
 
 
