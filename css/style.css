@@ -671,6 +671,7 @@ a {
 }
 
 
+
 /* ============================
    RESPONSIVE
 ============================ */
@@ -691,6 +692,20 @@ a {
 
   .formulario-contacto .fila-inputs input {
     flex: 1 1 48%;
+  }
+
+  .footer-contenido {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* Ajustar el tamaño de la fuente */
+  .footer-nav ul li a {
+    font-size: 1.1rem;
+  }
+
+  .footer-info p {
+    font-size: 13px;
   }
 }
 
@@ -816,7 +831,36 @@ a {
     width: 100%;
     padding: 0.75rem;
   }
+
+  .footer-contenido {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Ajustar la navegación */
+  .footer-nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer-nav ul li a {
+    font-size: 1rem;
+  }
+
+  /* Ajustar redes sociales */
+  .footer .redes-sociales {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* Ajustar la información de derechos reservados */
+  .footer-info p {
+    font-size: 12px;
+    margin-top: 1rem;
+  }
 }
+
+
 
 
 
