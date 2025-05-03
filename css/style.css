@@ -367,54 +367,55 @@ a {
 }
 
 
-
-
-/* Sección Galería */
+/* ============================================
+   SECCIÓN: GALERÍA
+============================================ */
 .galeria {
-  padding: 4rem 1rem;
+  padding: 4rem 2rem;
   background-color: #fff0f5;
   text-align: center;
 }
 
+.galeria .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.galeria-texto {
+  margin-bottom: 2rem;
+}
+
 .galeria h2 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: #d16e8d;
-  margin-bottom: 1rem;
-   text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 .galeria p {
-  margin-bottom: 2rem;
+  font-size: 1.1rem;
   color: #555;
-  margin-top: 0.5rem;
 }
-/* Texto galeria */
-.galeria-texto {
-  font-size: 2rem;
-  flex: 1;
-  min-width: 300px;
-}
-/* Grid de imágenes */
+
 .grid-galeria {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  /*grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));*/
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
 }
 
 .galeria img {
   width: 100%;
-  height: auto;
+  height: 220px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .galeria img:hover {
   transform: scale(1.05);
 }
 
-/* Lightbox */
+/* Lightbox estilos (solo si se activa con JS posteriormente) */
 .lightbox {
   display: none;
   position: fixed;
@@ -432,7 +433,7 @@ a {
 .lightbox-content {
   margin: auto;
   display: block;
-  max-width: 80%;
+  max-width: 90%;
   max-height: 80%;
   border-radius: 10px;
   transform: scale(0.8);
@@ -451,14 +452,12 @@ a {
   font-size: 40px;
   color: #fff;
   cursor: pointer;
-  transition: color 0.3s;
 }
 
 .close:hover {
   color: #f67289;
 }
 
-/* Navegación del lightbox */
 .prev, .next {
   position: absolute;
   top: 50%;
@@ -467,7 +466,6 @@ a {
   padding: 16px;
   cursor: pointer;
   transform: translateY(-50%);
-  transition: color 0.3s;
 }
 
 .prev { left: 20px; }
@@ -476,6 +474,8 @@ a {
 .prev:hover, .next:hover {
   color: #f67289;
 }
+
+
 
 
 /* Contacto - Estilos generales */
@@ -736,7 +736,20 @@ a {
   .producto-texto p {
     font-size: 1rem;
   }
+
+  .galeria h2 {
+    font-size: 1.8rem;
+  }
+
+  .galeria p {
+    font-size: 1rem;
+  }
+
+  .galeria img {
+    height: 180px;
+  }
 }
+
 
 
 
