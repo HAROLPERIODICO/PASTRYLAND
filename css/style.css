@@ -684,6 +684,9 @@ body {
   grid-template-columns: repeat(1, 1fr);
   /*grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));*/
 }
+.nav ul {
+   display: none;
+}
 
    .grid-galeria {
   display: grid;
