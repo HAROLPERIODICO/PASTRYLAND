@@ -299,59 +299,75 @@ a {
   transform: translateX(0);
 }
 
-/* Sección Productos */
-/* Card de producto */
-.producto {
+/* ============================================
+   SECCIÓN: PRODUCTOS
+============================================ */
+.productos {
+  padding: 4rem 2rem;
   background-color: #fffaf5;
-  padding: 1.5rem;
-  border-radius: 15px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.productos h2 {
-  font-size: 2rem;
+.productos .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.producto-texto {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.producto-texto h2 {
+  font-size: 2.2rem;
   color: #d16e8d;
-  margin-bottom: 1rem;
-   text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.producto-texto p {
+  font-size: 1.2rem;
+  color: #777;
 }
 
 .grid-productos {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
+}
+
+.producto {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
 
 .producto:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .producto img {
   width: 100%;
   border-radius: 10px;
-  height: auto;
-}
-
-/* Texto producto */
-.producto-texto {
-  font-size: 2rem;
-  flex: 1;
-  min-width: 300px;
+  object-fit: cover;
 }
 
 .producto h3 {
-  margin-top: 1rem;
+  font-size: 1.3rem;
   color: #a04e63;
-  font-size: 1rem;
+  margin-top: 1rem;
 }
 
 .producto p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #555;
   margin-top: 0.5rem;
 }
+
+
+
 
 /* Sección Galería */
 .galeria {
@@ -710,6 +726,14 @@ a {
   }
 
   .nosotros p {
+    font-size: 1rem;
+  }
+
+  .producto-texto h2 {
+    font-size: 1.8rem;
+  }
+
+  .producto-texto p {
     font-size: 1rem;
   }
 }
