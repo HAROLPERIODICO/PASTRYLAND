@@ -98,6 +98,55 @@ a {
   transform-origin: bottom left;
 }
 
+.nav-principal ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nav-principal li {
+  position: relative;
+}
+
+.nav-principal a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+/* Submenú oculto */
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  top: 100%;
+  left: 0;
+  padding: 0;
+  min-width: 200px;
+  z-index: 999;
+  border-radius: 8px;
+}
+
+.submenu li a {
+  padding: 0.75rem 1rem;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.submenu li a:hover {
+  background-color: #555;
+}
+
+/* Mostrar submenú al pasar el mouse */
+.dropdown:hover .submenu {
+  display: block;
+}
+
+
 /* BOTÓN CTA */
 .cta .btn {
   background-color: #ffd700;
