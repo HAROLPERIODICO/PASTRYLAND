@@ -1,97 +1,85 @@
-/* ============================================
-   RESET Y FUENTES
-============================================ */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
-
-{
+/* RESET Y FUENTE */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  /*font-family: 'Segoe UI', sans-serif;*/
+  font-family: 'Poppins', sans-serif;
   color: #333;
   background-color: #fffaf5;
   padding-top: 80px; /* Espacio para el header fijo */
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-/* Contenedor reutilizable */
-
-
-/* Header */
-/* Estilo del header */
+/* HEADER */
 .header {
-  background-color: #d16e8d; /* Color del fondo */
-  color: #fff; /* Color del texto */
+  background-color: #d16e8d;
+  color: #fff;
   padding: 1rem 0;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 100;
-}
-
-/* Contenedor central para el logo y la navegación */
-.header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header.scrolled {
   background-color: #ffe2e2;
 }
 
+/* CONTENEDOR GENERAL */
 .container {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 0 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-/* Estilo del logo */
-.header .logo a {
-  font-size: 2rem;
+/* LOGO */
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #fff;
-  text-decoration: none;
 }
 
-/* Estilo de la barra de navegación */
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* NAV */
 .nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
-  padding: 0;
-  margin: 0;
-}
-
-
-.nav ul li {
-  position: relative; /* Necesario para el pseudo-elemento */
 }
 
 .nav ul li a {
   color: #fff;
-  text-decoration: none;
   font-size: 1.1rem;
   font-weight: bold;
   padding: 5px 0;
+  position: relative;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Efecto hover en los enlaces de navegación */
 .nav ul li a:hover {
-  color: #ffd700; /* Color dorado */
-  transform: translateY(-5px); /* Desplazamiento hacia arriba */
+  color: #ffd700;
+  transform: translateY(-5px);
 }
 
-/* Agregar una línea de fondo en el hover para un efecto de deslizamiento */
 .nav ul li a::after {
   content: '';
   position: absolute;
@@ -99,31 +87,32 @@ body {
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: #ffd700; /* Color dorado */
+  background-color: #ffd700;
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
 }
 
-/* Activar la animación de la línea de fondo cuando el hover esté activo */
 .nav ul li a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
 
-
-/* Estilo para el botón de llamada a la acción */
+/* BOTÓN CTA */
 .cta .btn {
   background-color: #ffd700;
   color: #2091F9;
   padding: 10px 20px;
   border-radius: 25px;
-  text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
-/* Botón hamburguesa */
+.cta .btn:hover {
+  background-color: #ffc400;
+}
+
+/* BOTÓN HAMBURGUESA */
 .menu-toggle {
   display: none;
   font-size: 2rem;
@@ -132,6 +121,8 @@ body {
   color: white;
   cursor: pointer;
 }
+
+
 
 /* ============================================
    SECCIÓN: INICIO
@@ -659,117 +650,39 @@ body {
 }
 
 
-/* Responsive */
-
-
-/* Para pantallas de hasta 768px (tablets y móviles) */
+/* ============================
+   RESPONSIVE
+============================ */
 @media (max-width: 768px) {
-.cta {
-    display: none; /* Ocultamos el botón para móviles, opcional */
-}
-.nav ul {
-   display: none;
-}
-
-/* Botón hamburguesa */
-.menu-toggle {
-  display: block;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-.producto h1 {
-  width: 200px;
-  margin: 0 auto;
-}
-   .producto p  {
-  width: 200px;
-  margin: 0 auto;
-}
-   
-.grid-producto {
-    grid-template-columns: repeat(1, 1fr);
-  /*grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));*/
-}
-
-.grid-galeria {
-   grid-template-columns: repeat(2, 1fr);
-  /*grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));*/
-}
-.galeria h1 {
-  width: 200px;
-  margin: 0 auto;
-}
-
-.galeria p {
-  width: 200px;
-  margin: 0 auto;
-}
-   
-.contacto-grid {
+  .menu-toggle {
     display: block;
-   /* grid-template-columns: repeat(1, 1fr);*/
-}
+  }
 
-.formulario-contacto {
-    display: block;
-}
-/*.fila-inputs {
+  .nav {
+    width: 100%;
+    display: none;
     flex-direction: column;
-}
+    background-color: #d16e8d;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
 
-.fila-inputs input {
-    width: 100%;
-    min-width: unset;
-}
-
-.formulario-contacto {
-    width: 100%;
-}
-
-.info-contacto,
-.formulario-contacto {
-    width: 100%;
-    max-width: 500px;
-}*/
-
-.footer-nav ul {
+  .nav ul {
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
-}
-
-.redes-sociales-iconos {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-}
-
-/* Para pantallas muy pequeñas (hasta 480px) */
-@media (max-width: 480px) {
-  .formulario-contacto input,
-  .formulario-contacto textarea {
-    font-size: 0.95rem;
-    padding: 0.6rem;
+    gap: 10px;
+    padding: 20px 0;
   }
 
-  .formulario-contacto button {
-    font-size: 0.95rem;
-    padding: 0.6rem 1rem;
+  .nav.active {
+    display: flex;
   }
 
-  .icono-social {
-    width: 40px;
-    height: 40px;
-    font-size: 1rem;
-  }
-
-  .footer-info p {
-    font-size: 12px;
+  .cta {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
   }
 }
 
