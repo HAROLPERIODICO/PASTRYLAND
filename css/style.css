@@ -143,13 +143,13 @@ body {
 }
 
 .inicio .container {
-  max-width: 1200px;
-  margin: 0 auto;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 40px;
+  gap: 2rem;
   transition: box-shadow 0.4s ease, transform 0.4s ease;
 }
 
@@ -179,10 +179,10 @@ body {
   min-width: 300px;
 }
 .inicio .cta-btn {   
-  background-color: #ffd700;
-  color: #2091F9;
+  background-color: #2091F9;
+  color: #ffd700;
   padding: 10px 20px;
-  border-radius: 25px;
+  border-radius: 15px;
   text-decoration: none;
   font-weight: bold;
   width: 200px;
