@@ -137,7 +137,7 @@ body {
    SECCIÓN: INICIO
 ============================================ */
 .inicio {
-  background-color: #fff0f5;
+  background-color: #fffaf5;
   padding: 80px 0;
   text-align: center;
 }
@@ -150,10 +150,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-}
-.inicio .container:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  transform: translateY(-5px);
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
 }
 
 .inicio .intro {
@@ -176,24 +173,26 @@ body {
   margin-bottom: 30px;
 }
 
-
+/* Texto */
+.inicio-texto {
+  flex: 1;
+  min-width: 300px;
+}
 .inicio .cta-btn {   
-  background-color: #d16e8d;
-  color: #fff;
+  background-color: #ffd700;
+  color: #2091F9;
   padding: 10px 20px;
   border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  animation: fadeInUp 1.8s ease-out;
+  width: 200px;
+  margin: 0 auto;
+  transition: background-color 0.3s ease;
 }
 
 .inicio .cta-btn:hover {
   background-color: #b85c78;
   transform: translateY(-2px);
-  width: 200px;
-  margin: 0 auto;
-   
 }
 
 .inicio .hero-image {
