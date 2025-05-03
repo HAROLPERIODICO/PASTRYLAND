@@ -667,6 +667,9 @@ body {
 .cta {
     display: none; /* Ocultamos el botón para móviles, opcional */
 }
+.nav ul {
+   display: none;
+}
 
 /* Botón hamburguesa */
 .menu-toggle {
@@ -677,13 +680,15 @@ body {
   color: white;
   cursor: pointer;
 }
+
+.producto h1, producto p {
+  width: 200px;
+  margin: 0 auto;
+}
 .grid-producto {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   /*grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));*/
-}
-.nav ul {
-   display: none;
 }
 
 .grid-galeria {
