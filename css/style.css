@@ -121,10 +121,6 @@ body {
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
-  text-align: center;
-  width: 200px;
-  margin: 0 auto;
-  display: block;
 }
 
 /* Botón hamburguesa */
@@ -198,6 +194,9 @@ body {
 .inicio .cta-btn:hover {
   background-color: #b85c78;
   transform: translateY(-2px);
+  width: 200px;
+  margin: 0 auto;
+   
 }
 
 .inicio .hero-image {
