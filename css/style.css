@@ -177,18 +177,15 @@ body {
 }
 
 
-.inicio .cta-btn {
-  width: 200px; 
-  padding: 10px;
+.inicio .cta-btn {   
   background-color: #d16e8d;
   color: #fff;
-  font-size: 1em;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
   transition: background-color 0.3s ease, transform 0.2s ease;
   animation: fadeInUp 1.8s ease-out;
-  
 }
 
 .inicio .cta-btn:hover {
