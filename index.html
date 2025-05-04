@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>PASTRYLAND</title>
+    <link rel="shortcut icon" href="./img/favicon pastryland.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <meta name="theme-color" content="#2091F9">
+
+    <meta name="title" content="PASTRYLAND">
+    <meta name="description"
+        content="Hola, esta es mi WEB donde solo tienes que imaginarlo y te lo hacemos realidad.">
+
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://harolperiodico.github.io/PASTRYLAND/">
+    <meta property="og:title" content="PASTRYLAND">
+    <meta property="og:description"
+        content="Hola, esta es mi WEB donde solo tienes que imaginarlo y te lo hacemos realidad.">
+    <meta property="og:image" content="https://harolperiodico.github.io/PASTRYLAND/img/Logo75.png">
+
+</head>
+
+
+<body>    
+
+        <header class="header" id="main-header">
+           <div class="container">
+            <!-- Logo de la pastelería -->
+             <h1 class="logo">
+                <a href="#">
+                  <img src="img/Logo75.png" alt="Pastelería" loading="lazy" />
+                  PastryLand
+                </a>
+             </h1>
+            <!-- Ícono hamburguesa -->   
+             <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+            <!-- Barra de navegación -->
+             <nav class="nav" id="nav">
+              <ul id="menu">
+                <li><a href="#inicio">Inicio</a></li>  
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+              </ul>
+                     
+             </nav>
+
+        
+             <!-- Llamado a la acción -->
+              <div class="cta">
+                <a href="#contacto" class="btn">Contáctanos</a>
+              </div>
+          </div>  
+        </header>
+                
+        <main>
+          <section class="promociones" id="promociones">
+            <div class="promo-container">
+              <div class="promo-slider">
+                <div class="promo-slide active"><img src="img/promo1-.png" alt="promo1" /></div>
+                <div class="promo-slide"><img src="img/promo4.png" alt="cokeis cumpleaños" /></div>
+                <div class="promo-slide"><img src="img/promo3.png" alt="Osito rosado" /></div>
+                <div class="promo-slide"><img src="img/promo2.png" alt="Playa" /></div>
+              </div>
+              <div class="promo-indicators">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+              </div>
+            </div>
+          </section>
+          
+          
+          
+          
+          <section id="inicio" class="inicio">
+           <div class="container">
+              <div class="intro">   
+                <h1>Bienvenidos a <span>PastryLand</span></h1>
+                <p>Disfruta de las tortas artesanales más exquisitas y personalizadas para cada ocasión especial. En <strong>PastryLand</strong>, nos esforzamos por crear experiencias dulces y memorables para ti y tus seres queridos.
+                   ¡Imagina y lo hacemos realidad!
+                </p>
+                <p>Imagina y lo hacemos realidad
+                   En <strong>PastryLand</strong>, entendemos que cada ocasión es especial y merece una torta que refleje tu personalidad y estilo. Nuestro equipo de expertos en pastelería trabaja contigo para diseñar y crear la torta de tus sueños. ¡Imagina y lo hacemos realidad!
+                </p>
+                <button class="cta-btn" id="pedidoBtn">Haz tu pedido</button>
+            </div> 
+              <div class="hero-image">
+                <img src="img/Espejo chocolate.jpg" alt="Pastelería" loading="lazy" />
+              </div>
+            </div>
+          </section>
+        
+                
+          <section class="nosotros" id="nosotros">
+            <div class="container nosotros-container">
+            
+              <div class="nosotros-img animate-on-scroll">
+                <img src="img/Cerezas y chocolcte.jpg" alt="Pastelería artesanal" loading="lazy" />
+              </div>
+        
+             <div class="nosotros-texto animate-on-scroll">
+                <h2>Sobre Nosotros</h2>
+                <p>
+                  En <strong>PastryLand</strong> combinamos pasión, creatividad y los mejores ingredientes
+                  para dar vida a tortas, cupcakes y pasteles que no solo se ven increíbles, ¡sino que saben aún mejor!
+                </p>
+                <p>
+                  Nos encontramos en el corazón de <strong>San Antonio, Malambo</strong>, y somos el lugar ideal
+                  para hacer realidad tus ideas más dulces. ¡Tu celebración merece una obra de arte comestible!
+                </p>
+              </div>
+            </div>
+          </section>
+
+
+        
+          <section class="productos" id="productos">
+            <div class="container">
+                 <div class="producto-texto animate-on-scroll">
+                    <h2>Nuestros Productos</h2>
+                        <p>¡Mira esta delicia!</p>
+                </div>
+                <div class="grid-productos">
+                    
+                     <div class="producto animate-on-scroll">
+                        <img src="img/Boley boll.jpg" alt="Tortas Personalizadas" loading="lazy" />
+                        <h3>Tortas Personalizadas</h3>
+                        <p>Diseños únicos para cumpleaños, bodas y más.</p>
+                      </div>
+                    
+                      <div class="producto">
+                        <img src="img/Coke.jpg" alt="Cupcakes" loading="lazy" />
+                        <h3>Cupcakes</h3>
+                        <p>Sabores variados con decoración temática.</p>
+                      </div>
+                      <div class="producto">
+                        <img src="img/Alfajor.jpg" alt="Galletas" loading="lazy" />
+                        <h3>Galletas Decoradas</h3>
+                        <p>Perfectas para regalos y mesas dulces.</p>
+                      </div>
+                     <div class="producto">
+                        <img src="img/Chef.jpg" alt="Pasteles Tradicionales" loading="lazy" />
+                        <h3>Pasteles Tradicionales</h3>
+                        <p>Recetas caseras con el sabor de siempre.</p>
+                    </div>
+                </div>
+            </div>
+         </section>
+         <section class="galeria" id="galeria">
+             <div class="container">
+               <div class="galeria-texto animate-on-scroll">
+                 <h2>Galería</h2>
+                 <div>
+                 <p>Mira algunas de nuestras creaciones más deliciosas y creativas:</p>
+                 </div>
+               </div>
+               <div class="grid-galeria">
+                 <img src="img/Amor.jpg" alt="Torta de cumpleaños" loading="lazy" class="animate-on-scroll" />
+                 <img src="img/Multicolor.jpg" alt="Cupcakes decorados" loading="lazy" class="animate-on-scroll" />
+                 <img src="img/Flor dorada.jpg" alt="Torta elegante" class="animate-on-scroll" />
+                 <img src="img/Flor.jpg" alt="Galletas decoradas" class="animate-on-scroll" />
+                 <img src="img/Desorden Maquillaje.jpg" alt="Pastel clásico" loading="lazy" class="animate-on-scroll"/>
+                 <img src="img/Espejo chocolate.jpg" alt="Mesa dulce" loading="lazy" class="animate-on-scroll" />
+                 <img src="img/Conserva.jpg" alt="Torta de cumpleaños" loading="lazy" class="animate-on-scroll" />
+                 <img src="img/Electrico.jpg" alt="Cupcakes decorados" loading="lazy" class="animate-on-scroll" />
+                 <img src="img/Mesa chocco.jpg" alt="Torta elegante" loading="lazy" class="animate-on-scroll" />
+                 <img src="img/Nora.jpg" alt="Galletas decoradas" loading="lazy" class="animate-on-scroll" />
+                 <img src="img/Mesa marina.jpg" alt="Pastel clásico" loading="lazy" class="animate-on-scroll" />
+                 <img src="img/Torta azul.jpg" alt="Mesa dulce" loading="lazy" class="animate-on-scroll" />  
+                </div>
+             </div>
+          </section>
+        
+          <section class="contacto" id="contacto">
+             <div class="container">
+                <div class="contacto-texto animate-on-scroll texto">
+                 <h2>Contacto</h2>
+                 <p>¿Quieres hacer un pedido o tienes preguntas? ¡Escríbenos!</p>
+                </div>
+                <div class="contacto-grid">
+                    <div class="info-contacto">
+                      <p><strong>📍 Dirección:</strong> Carrera 1g # 7-11, San Antonio, Malambo, Atlántico</p>
+                      <p><strong>📞 Teléfono:</strong> +57 3175853510</p>
+                      <p><strong>📱 WhatsApp:</strong> <a href="https://wa.me/573175853510" target="_blank">Chatear</a></p>
+                      <p><strong>📧 Correo:</strong> lidimemaria2@gmail.com</p>
+                    </div>
+                    <form class="formulario-contacto animate-on-scroll texto" action="https://formspree.io/f/mgvagnez" method="POST">
+                        <div class="fila-inputs">
+                          <input type="text" name="nombre" placeholder="Nombre" required><br><br>
+                          <input type="tel" name="telefono"
+                                pattern="[0-9]{10}" 
+                                placeholder="Teléfono Ej: 5551234567" 
+                                required><br><br>
+                          </div>            
+                               <input type="email" placeholder="Email:" name="_replyto" required><br><br>                   
+                               <textarea placeholder="Tu mensaje..." rows="5" required></textarea>
+                               <button type="submit">Enviar mensaje</button>
+                     </form>               
+                </div>  
+             </div>
+          </section>
+                        
+        </main>
+                              <!-- Mapa opcional -->
+                    <div class="mapa">
+                         <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.0891158775875!2d-74.755123!3d10.850000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef5cb7e2e0f5f3b%3A0x6cfeb62a5a657eef!2sSan%20Antonio%2C%20Malambo%2C%20Atl%C3%A1ntico!5e0!3m2!1ses-419!2sco!4v1713526852041!5m2!1ses-419!2sco"
+                             width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                         </iframe>              
+                    </div>
+        <footer class="footer">
+          <div class="container">
+            <div class="footer-container">
+             <nav class="footer-nav">
+              <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Sobre Nosotros</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+              </ul>
+             </nav>
+                 <div class="redes-sociales">
+                    <a href="https://www.facebook.com/search/top?q=pastryland%20by%20lina%20d%C3%ADaz" target="_blank" class="facebook">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                    </a>
+                    
+                    <a href="https://www.instagram.com/pastryland2021/" target="_blank" class="instagram">
+                    <i class="fab fa-instagram"></i> Instagram
+                    </a>
+
+                    <a href="https://wa.me/573175853510" target="_blank" class="whatsapp">
+                      <i class="fab fa-whatsapp"></i> WhatsApp
+                      </a>                  
+
+                    <a href="https://wa.me/573175853510" class="whatsapp-flotante" target="_blank" aria-label="Chatea con nosotros por WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span class="tooltip-whatsapp">¡Chatea con nosotros!</span>
+                    </a>
+                </div>
+            </div>
+          </div>
+          <div class="footer-info">
+              <p>&copy; powered by HD SOFTWARE SOLUTIONS 2025 | Todos los derechos reservados Harol Enrique Díaz Meléndez.</p>
+          </div>
+        </footer>
+        
+         <!-- Lightbox container -->
+            <div id="lightbox" class="lightbox">
+             <span class="close" aria-label="Cerrar">&times;</span>
+             <img class="lightbox-content" id="lightbox-img" alt="Imagen Lightbox">
+             <a class="prev" href="#" aria-label="Anterior">&#10094;</a>  <!-- Flecha izquierda -->
+             <a class="next" href="#" aria-label="Siguiente">&#10095;</a>  <!-- Flecha derecha -->
+            </div>
+            
+           <a href="https://wa.me/573175853510" class="whatsapp-flotante" target="_blank" aria-label="Chat en WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+           </a>
+
+          <script src="js/menu.js"></script>	
+          <script src="js/slider.js"></script>
+          <script src="js/enivo-froms.js"></script>
+          <script src="js/promo-slider.js" defer></script>
+          <script src="js/actalizar_copy.js"></script>
+          <script src="js/lightbox.js"></script>
+          <script src="js/scroll-animations.js"></script>              
+        
+                        
+
+</body>
+
+</html>
