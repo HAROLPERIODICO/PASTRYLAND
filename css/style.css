@@ -56,7 +56,7 @@ a {
 }
 
 .promo-slide img {
-  width: auto%;
+  width: auto;
   max-width: 100%;
   height: auto;
   max-height: 100%; /* <<-- Ajusta aquí si quieres más pequeño o más grande */
