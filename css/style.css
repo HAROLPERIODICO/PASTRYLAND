@@ -984,11 +984,11 @@ a {
 
 /* ============================================
    SECCIÓN: BLOG
-============================================ */
+============================================ 
 
 
 
-/* Modal Blog */
+/* Modal Blog 
 .modal-blog {
   display: none;
   position: fixed;
@@ -1138,13 +1138,13 @@ a {
   color: #ff7b9c;
 }
 
-/* Hover sobre el enlace */
+/* Hover sobre el enlace 
 #btn-blog:hover i {
   transform: rotate(-10deg) scale(1.2);
   color: #ff3e6c;
 }
 
-/* Cuando el botón está activo (modal abierto) */
+/* Cuando el botón está activo (modal abierto) 
 #btn-blog.active i {
   transform: rotate(0deg) scale(1.4);
   color: #d63447;
@@ -1291,7 +1291,92 @@ a {
 
 .carrusel-dots button.active {
   background: #333;
+}*/
+
+.blog-carrusel-seccion {
+  padding: 2rem;
+  background: #fff5f8;
+  text-align: center;
 }
+
+.blog-carrusel-seccion h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.blog-carrusel-seccion p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.carrusel-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.carrusel-items {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carrusel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.carrusel-item img,
+.carrusel-item video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carrusel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.6);
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+.carrusel-btn.prev {
+  left: 10px;
+}
+
+.carrusel-btn.next {
+  right: 10px;
+}
+
+.carrusel-dots {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.carrusel-dots button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: #bbb;
+  cursor: pointer;
+}
+
+.carrusel-dots button.active {
+  background: #ff4081;
+}
+
 
 
 
