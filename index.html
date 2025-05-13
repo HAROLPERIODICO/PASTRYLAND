@@ -439,7 +439,48 @@
            <a href="https://wa.me/573175853510" class="whatsapp-flotante" target="_blank" aria-label="Chat en WhatsApp">
               <i class="fab fa-whatsapp"></i>
            </a>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const abrirBlog = document.getElementById("abrirBlog");
+      const modalBlog = document.getElementById("modalBlog");
+      const cerrarBlog = document.getElementById("cerrarBlog");
 
+      abrirBlog.addEventListener("click", function (e) {
+        e.preventDefault();
+        modalBlog.style.display = "block";
+      });
+
+      cerrarBlog.addEventListener("click", function () {
+        modalBlog.style.display = "none";
+      });
+
+      window.addEventListener("click", function (e) {
+        if (e.target == modalBlog) {
+          modalBlog.style.display = "none";
+        }
+      });
+
+      // Carrusel
+      const carrusel = document.getElementById("blogCarrusel");
+      const next = document.getElementById("nextBlog");
+      const prev = document.getElementById("prevBlog");
+      let index = 0;
+
+      next.addEventListener("click", () => {
+        if (index < carrusel.children.length - 1) {
+          index++;
+          carrusel.style.transform = `translateX(-${index * 100}%)`;
+        }
+      });
+
+      prev.addEventListener("click", () => {
+        if (index > 0) {
+          index--;
+          carrusel.style.transform = `translateX(-${index * 100}%)`;
+        }
+      });
+    });
+  </script>
 
           <script src="js/menu.js"></script>	
           <script src="js/slider.js"></script>
