@@ -51,7 +51,8 @@
                 <li><a href="#productos">Productos</a></li>
                 <li><a href="#galeria">Galería</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#" id="fas fa-birthday-cake">Blog</a></li>
+                <li><a href="#" id="btnBlog">Blog</a></li>
+
               </ul>
              </nav>
 
@@ -206,99 +207,30 @@
                 </div>  
              </div>
           </section>
-          <section class="blog" id="Blog"> 
-              <div class="container">
-
-                  <!-- Modal Blog -->
-                  <div id="modalBlog" class="modal-blog">
-                    <div class="modal-contenido">
-                      <span class="cerrar-modal" id="cerrarBlog">&times;</span>
-                      <h2>Blog de PastryLand</h2>
-                      <p>Así creamos nuestros deliciosos pasteles</p>
-                
-                      <div class="carrusel-blog">
-                        <div class="carrusel-items" id="blogCarrusel">
-                          <div class="item"><video src="videos/v_mile.mp4" controls></video></div>
-                          <div class="item"><img src="./img/proceso1.jpg" alt="Proceso 1"></div>
-                          <div class="item"><video src="./videos/pastel2.mp4" controls></video></div>
-                          <div class="item"><img src="./img/proceso2.jpg" alt="Proceso 2"></div>
-                        </div>
-                        <button id="prevBlog">&#10094;</button>
-                        <button id="nextBlog">&#10095;</button>
-                      </div>
-                    </div>
-                  </div>-->
-                    <!-- Carrusel de Videos e Imágenes
-                    <div class="carrusel-container">
-                      <div class="carrusel-items">
-                        <div class="carrusel-item">
-                          <video src="videos/v_mile.mp4" muted></video>
-                        </div>
-                        <div class="carrusel-item">
-                          <img src="./img/proces.jpg" alt="Decorando pastel 1" />
-                        </div>
-                        <div class="carrusel-item">
-                          <video src="videos/v_mile.mp4" muted></video>
-                        </div>
-                        <div class="carrusel-item">
-                          <img src="./img/proce.jpg" alt="Decorando pastel 2" />
-                        </div>
-                      </div> -->
-                
-                      <!-- Botones de navegación -->
-                     <!--   <button class="carrusel-btn prev">&#10094;</button>
-                      <button class="carrusel-btn next">&#10095;</button>
-                
-                      <!-- Dots para navegación -->
-                      <div class="carrusel-dots"></div>
-                    </div>
-                
-                    <!-- Información adicional sobre el proceso 
-                    <div class="blog-info">
-                      <h3>Más sobre el proceso</h3>
-                      <p>Nos encanta compartir el proceso detrás de nuestras tortas. Desde la selección de los ingredientes hasta los detalles más finos de la decoración. ¡Cada pastel tiene una historia que contar!</p>
-                      <p>Únete a nosotros mientras exploramos la pasión y la creatividad que ponemos en cada pieza que sale de nuestra cocina.</p>
-                    </div>-->
-                
-                    <!-- Llamado a la acción -->
-                   <!-- <div class="cta">
-                      <p>¡No te pierdas los próximos artículos sobre nuestras delicias! Suscríbete a nuestro boletín para recibir las últimas noticias y recetas exclusivas.</p>
-                      <a href="#" class="btn">Siguenos</a>
-                    </div>
-                  </div>-->
-    
-                         <!-- Lightbox container -->
-                <div id="lightbox" class="lightbox">
-                 <span class="close" aria-label="Cerrar">&times;</span>
-                 <img class="lightbox-content" id="lightbox-img" alt="Imagen Lightbox">
-                 <a class="prev" href="#" aria-label="Anterior">&#10094;</a>  <!-- Flecha izquierda -->
-                 <a class="next" href="#" aria-label="Siguiente">&#10095;</a>  <!-- Flecha derecha -->
-                </div>
+          <section class="blog" id="btnBlog"> 
+              <div class="container"> 
                 <div id="modalBlog" class="modal-blog">
-                  <div class="modal-content-blog">
-                    <span class="close-blog">&times;</span>
-                    <h2>Detrás de la Magia de PastryLand</h2>
-            
-              <div class="blog-media">
-               <!-- Video de ejemplo -->
-                  <div class="video">
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/_EjJrrSEeZg" frameborder="0"
-                      allowfullscreen></iframe>
+                    <div class="modal-content-blog">
+                        <span class="close-blog">&times;</span>
+                        <h2>Detrás de la Magia de PastryLand</h2>
+                    
+                    <div class="blog-media">
+                          <!-- Video de ejemplo -->
+                        <div class="video">
+                            <iframe width="100%" height="250" src="https://www.youtube.com/embed/_EjJrrSEeZg" frameborder="0"
+                              allowfullscreen></iframe>
+                        </div>
+                    
+                          <!-- Imagenes del proceso -->
+                        <div class="imagenes-blog">
+                            <img src="https://images.unsplash.com/photo-1541976844346-f18aeac57b06" alt="Preparando masa">
+                            <img src="https://images.unsplash.com/photo-1514513872410-54bdf5625816" alt="Decorando torta">
+                        </div>
+                    </div>
                   </div>
-            
-                  <!-- Imagenes del proceso 
-                  <div class="imagenes-blog">
-                    <img src="https://images." alt="Preparando masa">
-                    <img src="https://images." alt="Decorando torta">
-                  </div>
-                    <div style="text-align: center; margin-top: 20px;">
-                        <a href="https://www.youtube.com/@TuCanal" target="_blank" class="btn-ver-mas">Ver más videos</a>
-                    </div>-->
                 </div>
-              </div>
             </div>
-
-            </section>
+          </section>
 
 
                         
@@ -310,6 +242,8 @@
                              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
                          </iframe>              
                     </div>
+
+
         <footer class="footer">
           <div class="container">
             <div class="footer-container">
@@ -395,6 +329,26 @@
       });
     });
   </script>
+    <script>
+      const modalBlog = document.getElementById("modalBlog");
+      const btnBlog = document.getElementById("btnBlog");
+      const closeBlog = document.querySelector(".close-blog");
+    
+      btnBlog.onclick = function (e) {
+        e.preventDefault();
+        modalBlog.style.display = "block";
+      }
+    
+      closeBlog.onclick = function () {
+        modalBlog.style.display = "none";
+      }
+    
+      window.onclick = function (event) {
+        if (event.target == modalBlog) {
+          modalBlog.style.display = "none";
+        }
+      }
+    </script>
 
           <script src="js/menu.js"></script>	
           <script src="js/slider.js"></script>
