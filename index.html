@@ -51,8 +51,7 @@
                 <li><a href="#productos">Productos</a></li>
                 <li><a href="#galeria">Galería</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#blog"><i class="fas fa-birthday-cake"></i>Blog</a></li>
-                  
+                <li><a href="#" id="abrirBlog">Blog</a></li>
               </ul>
              </nav>
 
@@ -287,6 +286,25 @@
                 <h2>Blog - Proceso de creación de nuestras tortas</h2>
                 <p>En este blog, te mostramos cómo elaboramos nuestras tortas artesanales, desde el inicio hasta el toque final. ¡Mira cómo hacemos magia en la cocina! Aquí encontrarás videos, imágenes y mucho más sobre el proceso de elaboración de nuestras deliciosas creaciones.</p>
             </div>
+                  <!-- Modal Blog -->
+              <div id="modalBlog" class="modal-blog">
+                <div class="modal-contenido">
+                  <span class="cerrar-modal" id="cerrarBlog">&times;</span>
+                  <h2>Blog de PastryLand</h2>
+                  <p>Así creamos nuestros deliciosos pasteles</p>
+            
+                  <div class="carrusel-blog">
+                    <div class="carrusel-items" id="blogCarrusel">
+                      <div class="item"><video src="./videos/pastel1.mp4" controls></video></div>
+                      <div class="item"><img src="./img/proceso1.jpg" alt="Proceso 1"></div>
+                      <div class="item"><video src="./videos/pastel2.mp4" controls></video></div>
+                      <div class="item"><img src="./img/proceso2.jpg" alt="Proceso 2"></div>
+                    </div>
+                    <button id="prevBlog">&#10094;</button>
+                    <button id="nextBlog">&#10095;</button>
+                  </div>
+                </div>
+              </div>
                 <!-- Carrusel de Videos e Imágenes -->
                 <div class="carrusel-container">
                   <div class="carrusel-items">
