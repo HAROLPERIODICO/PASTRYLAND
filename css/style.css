@@ -988,7 +988,7 @@ a {
 
 
 
-/* Modal Blog 
+/* Modal Blog */
 .modal-blog {
   display: none;
   position: fixed;
@@ -1138,13 +1138,13 @@ a {
   color: #ff7b9c;
 }
 
-/* Hover sobre el enlace 
+/* Hover sobre el enlace */
 #btn-blog:hover i {
   transform: rotate(-10deg) scale(1.2);
   color: #ff3e6c;
 }
 
-/* Cuando el botón está activo (modal abierto) 
+/* Cuando el botón está activo (modal abierto)*/ 
 #btn-blog.active i {
   transform: rotate(0deg) scale(1.4);
   color: #d63447;
@@ -1291,7 +1291,7 @@ a {
 
 .carrusel-dots button.active {
   background: #333;
-}*/
+}
 
 .blog-carrusel-seccion {
   padding: 2rem;
